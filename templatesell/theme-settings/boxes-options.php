@@ -1,6 +1,6 @@
 <?php
 /*Promo Section Options*/
-
+$GLOBALS['urbane_theme_options'] = urbane_get_options_value();
 $wp_customize->add_section( 'urbane_promo_section', array(
     'priority'       => 20,
     'capability'     => 'edit_theme_options',

@@ -1,4 +1,6 @@
 <?php
+$GLOBALS['urbane_theme_options'] = urbane_get_options_value();
+
 /*Single Page Options*/
 $wp_customize->add_section('urbane_single_page_section', array(
     'priority' => 20,

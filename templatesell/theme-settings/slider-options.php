@@ -1,5 +1,6 @@
 <?php
 /*Slider Options*/
+$GLOBALS['urbane_theme_options'] = urbane_get_options_value();
 
 $wp_customize->add_section( 'urbane_slider_section', array(
    'priority'       => 20,

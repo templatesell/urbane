@@ -1,4 +1,6 @@
 <?php
+$GLOBALS['urbane_theme_options'] = urbane_get_options_value();
+
 /*Top Header Options*/
 $wp_customize->add_section( 'urbane_top_header_section', array(
    'priority'       => 20,
