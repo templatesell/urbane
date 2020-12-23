@@ -20,9 +20,6 @@ function urbane_scripts() {
     
     /*Slick CSS*/
     wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/css/slick.css', array(), '4.5.0' );
-	
-    /*mmenu CSS*/
-    wp_enqueue_style( 'offcanvas-style', get_template_directory_uri() . '/assets/css/canvi.css', array(), '4.5.0' );
 
    /*Main CSS*/
     wp_enqueue_style( 'urbane-style', get_stylesheet_uri() );
@@ -49,12 +46,7 @@ function urbane_scripts() {
 	/*Slick JS*/
     wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.js', array('jquery'), '4.6.0', true  );
     
-    /*mmenu JS*/
-    $canvi =  absint($urbane_theme_options['urbane_enable_offcanvas']);
-    if( 1  == $canvi )  {
-        wp_enqueue_script( 'offcanvas-script', get_template_directory_uri() . '/assets/js/canvi.js', array('jquery'), '4.6.0', true );
-        wp_enqueue_script( 'offcanvas-custom', get_template_directory_uri() . '/assets/js/canvi-custom.js', array('jquery'), '4.6.0', true );
-    }
+
     
     /*Custom Script JS*/
 	wp_enqueue_script( 'urbane-script', get_template_directory_uri() . '/assets/js/script.js', array(), '20200412', true );

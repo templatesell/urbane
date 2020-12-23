@@ -76,7 +76,6 @@ if (!function_exists('urbane_dynamic_css')) :
             $custom_css .= "
             .post-cats > span i, 
             .post-cats > span a,
-            .slide-wrap .caption .s-cat,
             .slide-wrap .caption span a:hover,
             .comment-form .logged-in-as a:last-child:hover, 
             .comment-form .logged-in-as a:last-child:focus,

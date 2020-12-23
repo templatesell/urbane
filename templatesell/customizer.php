@@ -26,7 +26,8 @@ if ( !function_exists('urbane_default_theme_options_values') ) :
             'urbane_header_image_height'=> '100',
 
            /*Header Options*/
-            'urbane_enable_offcanvas'  => 0,
+            'urbane_enable_advertisement'  => '',
+            'urbane_link_advertisement'=>'',
             'urbane_enable_search'  => 0,
 
             /*Colors Options*/

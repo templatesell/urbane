@@ -1,15 +1,15 @@
 /*
 Theme Name: Urbane
-Theme URI: https://www.templatesell.com/item/urbane-minimal-blog-wordpress-theme/
+Theme URI: https://www.templatesell.com/item/urbane-masonry-wordpress-blog-theme/
 Author: templatesell
 Author URI: https://www.templatesell.com/
-Description: A perfect theme for blog and magazine site. With masonry layout and multiple blog page layout, this theme is the awesome and minimal theme. This theme has search option, off-canvas sidebar, multiple sidebar options, footer options, featured slider, promo boxed, footer widgets and many more. Besides that, this theme comes with added custom widgets for author information, featured posts, social icons, etc. It comes with primary color option to change the whole site color with a single click. More Details: https://www.templatesell.com/item/urbane-minimal-blog-wordpress-theme/
-Version: 1.2.3
+Description: A perfect theme for blog and magazine site. With masonry layout and multiple blog page layout, this theme is the awesome and minimal theme. This theme has search option, off-canvas sidebar, multiple sidebar options, footer options, featured slider, promo boxed, footer widgets and many more. Besides that, this theme comes with added custom widgets for author information, featured posts, social icons, etc. It comes with primary color option to change the whole site color with a single click. It is advertisement ready theme. More Details: https://www.templatesell.com/item/urbane-masonry-wordpress-blog-theme/
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: urbane
 Requires PHP: 5.2
-Tested up to: 5.5
+Tested up to: 5.6
 Tags: custom-background, custom-header, one-column, two-columns, three-columns, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog, news
 
 This theme, like WordPress, is licensed under the GPL.
@@ -955,7 +955,7 @@ th {
     font-size: 16px;
     line-height: 1.42857143;
     background-color: #fff;
-    border-bottom: 1px solid #fafafa;
+    border-bottom: 1px solid #f2f2f2;
     z-index: 200;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
@@ -990,7 +990,6 @@ th {
 .main-header .logo {
     position: relative;
     padding: 15px 0;
-    text-align: center;
     line-height: 56px;
 }
 .main-header .logo p,
@@ -1663,9 +1662,10 @@ div#MobileMenu {
 /*====================================================
 ## Header One
 =======================================================*/
-
-.header-1 #site-navigation{
+nav#site-navigation {
     position: relative;
+    display: inline-block;
+    width: 100%;
 }
 .header-1 .bar-menu{
     display: none;
@@ -1677,7 +1677,6 @@ div#MobileMenu {
 .header-1 .head_one .logo{
     margin: auto;
     max-width: 400px;
-    text-align: center;
     padding: 50px 0;
     float: none;
 }
@@ -1687,15 +1686,13 @@ div#MobileMenu {
 .header-1 .sticky .head_one{
     display: none;
 }
-.header-1 .main-menu{
-    float: none;
-    text-align: left;
-    margin: auto;
+.add__banner{
+    margin: 30px 0;
 }
 @media (min-width: 1200px){
     .header-1 .main-menu {
         float: none;
-        text-align: center;
+        text-align: left;
 
     }
     .header-1 .main-menu > ul > li > a {
@@ -1718,17 +1715,38 @@ div#MobileMenu {
 
     }
     .header-1 .bar-menu {
-        left: auto;
-        position: relative;
-        right: auto;
-        margin: auto;
-        top: auto;
-        line-height: 68px;
         display: block;
-        text-align: center;
-        cursor: pointer;
+        width: 20px;
+        padding: 21px 0;
+        margin: 0;
+        float: left;
+        position: relative;
+        z-index: 2;
         background: none;
-        border: none
+        border: none;
+    }
+    .header-1 .bar-menu span{
+        background: #333;
+        height: 2px;
+        margin: 6px 0;
+        display: inherit;
+    }
+    .header-1 .bar-menu:before,
+    .header-1 .bar-menu:after {
+        content: '';
+        display: block;
+        background: #333;
+        height: 2px;
+    }
+    .header-1 .main-menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        text-align: left;
+        background: #fff;
+        z-index: 50;
+        margin-top: 10px;
     }
     .header-1 .header-image .head_one{
         border: 0;
@@ -1969,28 +1987,49 @@ section.slider-wrapper {
 ## slider Two
 **/
 .slide-wrap{
-    display: table;
     width: 100%;
-    background: #fafafa;
-    margin-top: 50px;
-}
-.slide-wrap [class*="col-"]{
-    display: table-cell;
-    vertical-align: middle;
-    float: none;
-    padding: 0;
 }
 .slide-wrap .slider-height{
     height: 450px;
 }
-.slide-wrap .caption {
-    text-align: left;
-    padding: 20px 70px;
+.slide-wrap .caption{
+    position: absolute;
+    width: 420px;
+    left: 50%;
+    top: 50%;
+    background: rgba(0,0,0,0.7);
+    max-width: 80%;
+    text-align: center;
+    padding: 50px 40px;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    line-height: 24px;
+}
+.modern-slider .slick-active .caption{
+    opacity: 1;
+}
+.slide-wrap .caption:after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 1px solid #ec407a;
+    z-index: 1;
+    opacity: 0.7;
 }
 .slide-wrap .caption h2 a{
     font-style: normal;
     line-height: 1.2;
-    color: #2f3235;
+    color: #fff;
     font-size: 24px;
 }
 .slide-wrap .entry-meta{
@@ -2004,14 +2043,7 @@ section.slider-wrapper {
     letter-spacing: normal;
 }
 .slide-wrap .caption .s-cat{
-    color: #d42929;
-    z-index: 3;
-    display: inline-block;
-    font-size: 14px;
-    border-radius: 1px;
-    line-height: normal;
-    padding: 20px 0;
-    position: relative;
+    color: #fff;
     margin-bottom: 5px;
 }
 .slide-wrap .caption .s-cat:hover{
@@ -2041,28 +2073,38 @@ section.slider-wrapper {
 }
 .modern-slider .slick-arrow {
     position: absolute;
-    height: 70px;
-    width: 70px;
+    height: 40px;
+    width: 40px;
     text-align: center;
     line-height: 30px;
     border-radius: 0;
-    color: #000;
-    font-size: 35px;
-    bottom: 4px;
+    color: #fff;
+    font-size: 20px;
+    top: 50%;
     left: 0;
     z-index: 2;
     cursor: pointer;
     border: 0;
-    background: #fff;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
     outline: none;
 }
-.modern-slider .slick-arrow:hover{
-  background: #333;
-  color: #fff;
+.modern-slider:hover .slick-arrow{
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: translateY(-50%) scale(1);
+    transform: translateY(-50%) scale(1);
+}
+.modern-slider .slick-arrow.slick-prev{
+  left:30px;
 }
 .modern-slider .slick-arrow.slick-next {
-  left: 70px;
-  right:auto;
+  left: auto;
+  right:30px;
 }
 .modern-slider .slick-dots {
   position: absolute;
@@ -2100,7 +2142,6 @@ section.slider-wrapper {
         float: right;
     }
     .slide-wrap .caption {
-        text-align: left;
         padding: 20px 15px;
     }
     .slide-wrap .slider-height {
@@ -2114,7 +2155,7 @@ section.slider-wrapper {
 **/
 
 .archive-heading{
-    max-width: 500px;
+    max-width: 100%;
     width: 100%;
     padding: 0 15px;
 }
@@ -2746,6 +2787,22 @@ a.effect:active {
     padding-right: 5px;
     margin-bottom: 5px;
     line-height: 20px;
+}
+.post-cats > span a:after{
+    content: "";
+    display: inline-block;
+    border: 1px solid;
+    font-size: 12px;
+    width: 4px;
+    height: 4px;
+    margin: 0 10px 0 12px;
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    vertical-align: middle;
+}
+.post-cats > span a:last-child:after{
+    display: none;
 }
 .post-cats > span a:hover,
 .post-cats > span a:focus{
@@ -5965,7 +6022,45 @@ div#urbane-breadcrumbs {
 }
 .promo-section .item{
     position: relative;
-    padding:15px;
+    margin-bottom: 20px;
+}
+.promo-section .item a::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    top: 15px;
+    border: 1px solid rgba(255,255,255,0.6);
+    z-index: 2;
+}
+.promo-section .item a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.promo-section .item figure{
+    position: relative;
+}
+.promo-section .item figure:after{
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 66.67%;
+}
+.promo-section .image-box{
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 .promo-one .item .promo-content{
     color: #fff;
@@ -5996,6 +6091,7 @@ div#urbane-breadcrumbs {
     background-color: #ffffff;
     display: inline-block;
 }
+
 .promo-section .post-tags:hover{
     opacity: 0.8;
 }

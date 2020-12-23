@@ -56,14 +56,14 @@ if ( ! function_exists( 'urbane_entry_meta' ) ) :
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'urbane' ) );
+		$categories_list = get_the_category_list( esc_html__( '&nbsp;', 'urbane' ) );
 
 		if ( $categories_list ) {
 			echo '<span class="cat-links">' . $categories_list . '</span>';
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'urbane' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ',', 'urbane' ) );
 		if ( $tags_list && is_singular() ) {
 			printf( '<span class="tags-links">' . '<i class="fa fa-tag"></i>' . '</span>', $tags_list ); // WPCS: XSS OK.
 		}

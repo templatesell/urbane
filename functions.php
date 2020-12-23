@@ -47,7 +47,6 @@ if ( ! function_exists( 'urbane_setup' ) ) :
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'urbane' ),
 			'top' => esc_html__( 'Top Menu', 'urbane' ),
-			'footer' => esc_html__( 'Footer Menu', 'urbane' ),
 			'social' => esc_html__( 'Social Icons', 'urbane' ),
 		) );
 

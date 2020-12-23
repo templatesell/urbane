@@ -7,31 +7,35 @@
 	jQuery(document).ready(function() {
     	// Slider JS
     	$('.modern-slider').slick({
-            slidesToShow: 1,
-    		slidesToScroll: 1,
-    		autoplay: false,
-			autoplaySpeed: 5000,
-			dots: true,
-			fade: true,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 10000,
+			dots: false,
+			arrows: true,
+			centerMode: true,
+			centerPadding: '25%',
 			prevArrow:
 			'<button type="button" class="slick-prev"><span class="fa fa-angle-left"></span></button>',
 			nextArrow:
 			'<button type="button" class="slick-next"><span class="fa fa-angle-right"></span></button>',
 			arrows: true,
-			dots: true,
 	      	responsive: [
+	      		{
+	      			breakpoint: 480,
+				  	settings: {
+					  	centerPadding:false,
+					}
+	      		},
 				{
 				  breakpoint: 767,
 				  settings: {
-				    dots: true,
-				    arrows: false,
+				  	centerPadding: '10%',
 				  }
 				},
 				{
 				  breakpoint: 992,
 				  settings: {
-				    arrows: false,
-				    dots: true,
+				    centerPadding: '15%',
 				  }
 				}
 			]

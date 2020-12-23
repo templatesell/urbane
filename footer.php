@@ -62,18 +62,7 @@ if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active
 	<footer class="site-footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-12 pull-right">
-					<?php
-					if (has_nav_menu('footer')) {
-						wp_nav_menu( array(
-							'theme_location' => 'footer',
-							'menu_id'        => '',
-							'container' => 'ul',
-							'menu_class'      => 'footer-menu'
-						) );
-					} ?>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12 pull-left">
+				<div class="col-sm-12 text-center">
 					<div class="copyright">
 						<?php echo $copyright; ?>
 					</div>

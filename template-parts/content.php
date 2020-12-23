@@ -43,6 +43,24 @@ $author = absint($urbane_theme_options['urbane-show-hide-author']);
                     ?>
                 <?php endif; ?>
             </div>
+            <div class="post-meta">
+                <?php
+                if ('post' === get_post_type()) :
+                    ?>
+                    <div class="post-date">
+                        <div class="entry-meta">
+                            <?php
+                            if($date == 1 ){
+                                urbane_posted_on();
+                            }
+                            if($author == 1 ){
+                                urbane_posted_by();
+                            }
+                            ?>
+                        </div><!-- .entry-meta -->
+                    </div>
+                <?php endif; ?>
+            </div>
             <div class="post-excerpt entry-content">
                 <?php
                 if (is_singular()) {
@@ -64,25 +82,6 @@ $author = absint($urbane_theme_options['urbane-show-hide-author']);
                     <a class="more-link" href="<?php the_permalink(); ?>"><?php echo esc_html($read_more); ?> <i
                                 class="fa fa-long-arrow-right"></i>
                     </a>
-                <?php endif; ?>
-            </div>
-            <!-- .entry-content end -->
-            <div class="post-meta">
-                <?php
-                if ('post' === get_post_type()) :
-                    ?>
-                    <div class="post-date">
-                        <div class="entry-meta">
-                            <?php
-                            if($date == 1 ){
-                                urbane_posted_on();
-                            }
-                            if($author == 1 ){
-                                urbane_posted_by();
-                            }
-                            ?>
-                        </div><!-- .entry-meta -->
-                    </div>
                 <?php endif; ?>
             </div>
         </div>
