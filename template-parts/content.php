@@ -50,12 +50,16 @@ $author = absint($urbane_theme_options['urbane-show-hide-author']);
                     <div class="post-date">
                         <div class="entry-meta">
                             <?php
-                            if($date == 1 ){
-                                urbane_posted_on();
-                            }
                             if($author == 1 ){
+                                ?>
+                                <i class="fa fa-user-o"></i>
+                              <?php
                                 urbane_posted_by();
                             }
+                            if($date == 1 ){ ?>
+                                <i class="fa fa-calendar-o"></i>
+                              <?php  urbane_posted_on(); 
+                             }
                             ?>
                         </div><!-- .entry-meta -->
                     </div>

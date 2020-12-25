@@ -65,12 +65,10 @@ if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active
 				<div class="col-sm-12 text-center">
 					<div class="copyright">
 						<?php echo $copyright; ?>
-					</div>
-					<div class="site-info">
 						<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'urbane' ) ); ?>">
 							<?php
 							/* translators: %s: CMS name, i.e. WordPress. */
-							printf( esc_html__( 'Proudly powered by %s', 'urbane' ), 'WordPress' );
+							printf( esc_html__( ' - Proudly powered by %s', 'urbane' ), 'WordPress' );
 							?>
 						</a>
 						<span class="sep"> | </span>

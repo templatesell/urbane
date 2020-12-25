@@ -7,7 +7,7 @@ function urbane_scripts() {
 	/*google font  */
 	global $urbane_theme_options;
     /*body  */
-    wp_enqueue_style('urbane-body', '//fonts.googleapis.com/css?family=Muli:400,400i,500,600,700&display=swap', array(), null);
+    wp_enqueue_style('urbane-body', '//fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&display=swap', array(), null);
     /*heading  */
     wp_enqueue_style('urbane-heading', '//fonts.googleapis.com/css?family=Prata&display=swap', array(), null);
     /*Author signature google font  */

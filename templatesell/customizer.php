@@ -31,7 +31,7 @@ if ( !function_exists('urbane_default_theme_options_values') ) :
             'urbane_enable_search'  => 0,
 
             /*Colors Options*/
-            'urbane_primary_color'              => '#d42929',
+            'urbane_primary_color'              => '#ec407a',
 
             /*Slider Options*/
             'urbane_enable_slider'      => 1,

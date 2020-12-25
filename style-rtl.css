@@ -60,7 +60,7 @@ a:focus {
 
 }
 a:hover {
-    color: #d42929;
+    color: #ec407a;
 }
 
 /* H1 - H6 */
@@ -1097,7 +1097,7 @@ th {
 
 .main-menu ul li.current-menu-item > a,
 .main-menu ul li:hover > a {
-    color: #d42929;
+    color: #ec407a;
     background-color: #f6f6f6;
 }
 
@@ -1426,7 +1426,7 @@ th {
     Submenu
     ================================================ */
     .main-menu.submenu-top-border li > ul {
-        border-top: 3px solid #d42929;
+        border-top: 3px solid #ec407a;
     }
     .main-menu.submenu-top-border li > ul ul {
         top: -30px;
@@ -2018,8 +2018,8 @@ section.slider-wrapper {
     background: rgba(0, 0, 0, 0.37);
 }
 .bottom-caption .slick-current .slider-items span{
-    background: #d42929;
-    border: 2px solid #d42929;
+    background: #ec407a;
+    border: 2px solid #ec407a;
 }
 .bottom-caption .slider-items a,
 .bottom-caption .slider-items h4 {
@@ -2093,7 +2093,7 @@ section.slider-wrapper {
     letter-spacing: normal;
 }
 .slide-wrap .caption .s-cat{
-    color: #d42929;
+    color: #ec407a;
     z-index: 3;
     display: inline-block;
     font-size: 14px;
@@ -2459,7 +2459,7 @@ article.format-quote .post-content .post-format::after {
     width: 30px;
     line-height: 30px;
     height: 30px;
-    background: #d42929;
+    background: #ec407a;
 }
 article.format-standard .post-content .post-format::after{
     content: "\f016"
@@ -2676,7 +2676,7 @@ object {
 }
 .post-date a:focus,
 .post-date a:hover {
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 .post-date .entry-meta span{
@@ -2718,7 +2718,7 @@ object {
 .post-excerpt a:focus,
 .content a:hover,
 .content a:focus {
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 .content p {
@@ -2847,7 +2847,7 @@ a.effect:active {
 }
 .post-cats > span i,
 .post-cats > span a {
-    color: #d42929;
+    color: #ec407a;
     font-size: 14px;
     padding-right: 5px;
     margin-bottom: 5px;
@@ -2855,7 +2855,7 @@ a.effect:active {
 }
 .post-cats > span a:hover,
 .post-cats > span a:focus{
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 .post-cats > span.tags-links{
@@ -2943,7 +2943,7 @@ a.effect:active {
 }
 a.link-format {
     padding: 43px 20px;
-    background: #d42929;
+    background: #ec407a;
     margin: 0px -15px;
     color: #fff;
     font-size: 20px;
@@ -2954,7 +2954,7 @@ a.link-format:hover {
 }
 /* post format: Quote */
 .format-quote .post-wrap{
-    background: #d42929;
+    background: #ec407a;
 }
 .format-quote .content{
     color: #fff;
@@ -3016,7 +3016,7 @@ a.link-format:hover {
     color: #fff;
 }
 .pagination a.page-numbers:hover {
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 
@@ -3108,7 +3108,7 @@ a.link-format:hover {
 }
 .posts-navigation .nav-links a:hover,
 .posts-navigation .nav-links a:focus {
-    color: #d42929; /* .post-title-nav color */
+    color: #ec407a; /* .post-title-nav color */
 }
 .show-more {
     position: relative;
@@ -3131,7 +3131,7 @@ a.link-format:hover {
     max-width: 100%;
     letter-spacing: .05em;
     padding: 1rem 4rem;
-    background: #d42929;
+    background: #ec407a;
     color: #fff;
     margin: auto;
 }
@@ -3237,7 +3237,7 @@ a.link-format:hover {
 }
 .post-navigation .nav-links a:hover,
 .post-navigation .nav-links a:focus {
-    color: #d42929; /* .post-title-nav color */
+    color: #ec407a; /* .post-title-nav color */
 }
 
 
@@ -3425,12 +3425,12 @@ input[type="radio"] {
 }
 input[type="checkbox"]:hover,
 input[type="radio"]:hover {
-    border-color: #d42929;
+    border-color: #ec407a;
 }
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-    background: #d42929;
-    border-color: #d42929;
+    background: #ec407a;
+    border-color: #ec407a;
 }
 input[type="checkbox"]:checked:before {
     content: "\2714";
@@ -3507,7 +3507,7 @@ input[type="radio"]:checked:before {
 }
 .about-author-name a:hover,
 .about-author-name a:focus {
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 .about-author-name .about-author-posts-num {
@@ -3542,7 +3542,7 @@ input[type="radio"]:checked:before {
 }
 .about-author-posts-link:hover,
 .about-author-posts-link:focus {
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 .author-socials {
@@ -3650,7 +3650,7 @@ input[type="radio"]:checked:before {
 #email:hover,
 #url:hover,
 #comment:hover {
-    border-color: #d42929;
+    border-color: #ec407a;
 }
 #author:active,
 #email:active,
@@ -3661,7 +3661,7 @@ input[type="radio"]:checked:before {
 #url:focus,
 #comment:focus {
     outline: none;
-    border-color: #d42929;
+    border-color: #ec407a;
 }
 
 /* allowed tags */
@@ -3698,7 +3698,7 @@ input[type="radio"]:checked:before {
     color: #ffffff;
 }
 .comment-form #submit:hover {
-    background-color: #d42929;
+    background-color: #ec407a;
 }
 .comment-form #submit:active {
     position: relative;
@@ -3717,7 +3717,7 @@ input[type="radio"]:checked:before {
 }
 .comment-respond .must-log-in a:hover,
 .comment-respond .must-log-in a:focus {
-    color: #d42929;
+    color: #ec407a;
 }
 
 /* "logged-in as ..." message */
@@ -3734,7 +3734,7 @@ input[type="radio"]:checked:before {
 }
 .comment-form .logged-in-as a:last-child:hover,
 .comment-form .logged-in-as a:last-child:focus {
-    color: #d42929;
+    color: #ec407a;
 }
 
 /* cancel comment reply link */
@@ -3755,7 +3755,7 @@ input[type="radio"]:checked:before {
     margin-right: 8px;
 }
 .comment-reply-title #cancel-comment-reply-link:hover {
-    color: #d42929;
+    color: #ec407a;
 }
 
 
@@ -3842,7 +3842,7 @@ input[type="radio"]:checked:before {
 }
 .comment-list .pingback .comment-body > a:hover,
 .comment-list .pingback .comment-body > a:focus {
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 .comment-list .pingback .comment-body .edit-link {
@@ -3859,7 +3859,7 @@ input[type="radio"]:checked:before {
 }
 .comment-list .pingback .comment-body .edit-link .comment-edit-link:hover,
 .comment-list .pingback .comment-body .edit-link .comment-edit-link:focus {
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 
@@ -3888,7 +3888,7 @@ input[type="radio"]:checked:before {
 }
 .comment-meta .comment-author .fn .url:hover,
 .comment-meta .comment-author .fn .url:focus {
-    color: #d42929;
+    color: #ec407a;
 }
 .comment-meta .comment-author .says {
     clip: rect(1px, 1px, 1px, 1px);
@@ -3922,7 +3922,7 @@ input[type="radio"]:checked:before {
 }
 .comment-meta .comment-metadata a:hover,
 .comment-meta .comment-metadata a:focus {
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 
@@ -3955,7 +3955,7 @@ input[type="radio"]:checked:before {
 }
 .comment-content a:hover,
 .comment-content a:focus {
-    color: #d42929;
+    color: #ec407a;
 }
 
 /* comment reply */
@@ -3977,7 +3977,7 @@ input[type="radio"]:checked:before {
     color: #989ea6;
 }
 .comment-body .reply .comment-reply-link:hover {
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 
@@ -4062,7 +4062,7 @@ input[type="radio"]:checked:before {
 }
 .comment-navigation .nav-links a:hover,
 .comment-navigation .nav-links a:focus {
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 .comment-navigation .nav-previous i {
@@ -4232,7 +4232,7 @@ input[type="radio"]:checked:before {
 }
 .page-404-content a:hover,
 .page-404-content a:focus {
-    color: #d42929;
+    color: #ec407a;
 }
 .search-no-results .search-form label,
 .page-404-content .search-form label {
@@ -4439,7 +4439,7 @@ input[type="radio"]:checked:before {
 }
 .widget a:hover,
 .widget a:focus {
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 
@@ -4459,7 +4459,7 @@ input[type="radio"]:checked:before {
 }
 .widget .widget-title a:hover,
 .widget .widget-title a:focus {
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 
@@ -4856,7 +4856,7 @@ input[type="radio"]:checked:before {
 .textwidget input[type="reset"]:hover,
 .textwidget input[type="submit"]:hover {
     color: #ffffff;
-    background: #d42929;
+    background: #ec407a;
 }
 .textwidget button:active,
 .textwidget input[type="button"]:active,
@@ -4922,7 +4922,7 @@ input[type="radio"]:checked:before {
 .textwidget input[type="date"]:hover,
 .textwidget textarea:hover,
 .textwidget select:hover {
-    border-bottom-color: #d42929;
+    border-bottom-color: #ec407a;
 }
 .textwidget input[type="text"]:focus,
 .textwidget input[type="email"]:focus,
@@ -4936,7 +4936,7 @@ input[type="radio"]:checked:before {
 .textwidget select:active,
 .textwidget select:focus {
     outline: none;
-    border-bottom-color: #d42929;
+    border-bottom-color: #ec407a;
 }
 .textwidget input[type="file"] {
     width: 100%;
@@ -4950,11 +4950,11 @@ input[type="radio"]:checked:before {
     transition: border-color 0.2s ease;
 }
 .textwidget input[type="file"]:hover {
-    border-color: #d42929;
+    border-color: #ec407a;
 }
 .textwidget input[type="file"]:focus {
     outline: none;
-    border-color: #d42929;
+    border-color: #ec407a;
 }
 .textwidget input[type="checkbox"],
 .textwidget input[type="radio"] {
@@ -5115,7 +5115,7 @@ input[type="radio"]:checked:before {
     border-bottom: 2px solid #e3e5e6;
 }
 .widget_search #searchform .search-submit:hover {
-    color: #d42929;
+    color: #ec407a;
 }
 
 
@@ -5426,7 +5426,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
     line-height: normal;
     padding: 4px 12px;
     position: relative;
-    background: #d42929;
+    background: #ec407a;
 }
 .post-slider-section .s-cat:hover{
     color: #ffffff!important;
@@ -5796,11 +5796,11 @@ div[class*="footer-col-"]:last-child {
 }
 
 .site-footer a {
-    color: #d42929;
+    color: #ec407a;
 }
 .site-footer a:hover,
 .site-footer a:focus {
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 
@@ -5821,7 +5821,7 @@ div[class*="footer-col-"]:last-child {
 }
 .footer-social-links a:hover,
 .footer-social-links a:focus {
-    color: #d42929;
+    color: #ec407a;
 }
 
 /* footer menu */
@@ -5845,7 +5845,7 @@ div[class*="footer-col-"]:last-child {
 }
 .footer-menu li a:hover,
 .footer-menu li a:focus {
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline !important;
 }
 .footer-menu li ul {
@@ -5872,7 +5872,7 @@ div[class*="footer-col-"]:last-child {
     font-family: sans-serif;
     font-size: 16px;
     color: #ffffff;
-    background-color: #d42929;
+    background-color: #ec407a;
     border-radius: 50%;
     box-shadow: 0 14px 28px -4px rgba(14,17,20,0.15);
     -webkit-transition: all 0.2s ease;
@@ -5885,7 +5885,7 @@ div[class*="footer-col-"]:last-child {
 }
 #toTop:hover {
     color: #ffffff;
-    background-color: #d42929;
+    background-color: #ec407a;
 }
 #toTop:active i {
     position: relative;
@@ -5940,7 +5940,7 @@ ul.trail-items li [rel~=home] span:before {
     font-family: Fontawesome;
 }
 ul.trail-items li a:hover span{
-    color: #d42929;
+    color: #ec407a;
 }
 .breadcrumbs .delim {
     padding: 0 10px;
@@ -6119,7 +6119,7 @@ div#urbane-breadcrumbs {
     text-transform: uppercase;
 }
 .promo-three .post-category a{
-    color: #d42929;
+    color: #ec407a;
     font-size: 14px;
     padding-right: 5px;
     margin-bottom: 5px;
@@ -6515,12 +6515,12 @@ div#urbane-breadcrumbs {
     font-size: 15px;
     font-weight: 700;
     line-height: 1.7;
-    color: #d42929;
+    color: #ec407a;
     text-decoration: underline;
 }
 .post-excerpt .wp-block-file a:not(.wp-block-file__button):focus,
 .post-excerpt .wp-block-file a:not(.wp-block-file__button):hover {
-    color: #d42929;
+    color: #ec407a;
 }
 .post-excerpt .wp-block-file .wp-block-file__button {
     display: inline-block;
@@ -6544,7 +6544,7 @@ div#urbane-breadcrumbs {
 .post-excerpt .wp-block-file .wp-block-file__button:visited {
     box-shadow: none;
     color: #ffffff;
-    background: #d42929;
+    background: #ec407a;
     opacity: 1;
 }
 
@@ -6762,7 +6762,7 @@ div#urbane-breadcrumbs {
 }
 .post-excerpt .wp-block-calendar #wp-calendar tfoot td a:hover,
 .post-excerpt .wp-block-calendar #wp-calendar tfoot td a:focus {
-    color: #d42929;
+    color: #ec407a;
 }
 
 /* widget: rss */
@@ -6928,7 +6928,7 @@ div#urbane-breadcrumbs {
     color: #fff;
     font-size: 12px;
     text-transform: uppercase;
-    background: #d42929;
+    background: #ec407a;
     border-radius: 50%;
     left: 10px;
     top: 5px;
