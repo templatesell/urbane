@@ -21,15 +21,14 @@ if (!function_exists('urbane_social_sharing')) :
         $urbane_linkedin_sharing_url = esc_url('http://www.linkedin.com/shareArticle?mini=true&title=' . $urbane_title . '&url=' . $urbane_url);
         
         ?>
-        <div class="meta_bottom">
-            <div class="post-share">
-                <a target="_blank" href="<?php echo $urbane_facebook_sharing_url; ?>"><i class="fa fa-facebook"></i></a>
-                <a target="_blank" href="<?php echo $urbane_twitter_sharing_url; ?>"><i
-                            class="fa fa-twitter"></i></a>
-                <a target="_blank" href="<?php echo $urbane_pinterest_sharing_url; ?>"><i
-                            class="fa fa-pinterest"></i></a>
-                <a target="_blank" href="<?php echo $urbane_linkedin_sharing_url; ?>"><i class="fa fa-linkedin"></i></a>
-            </div>
+        
+        <div class="post-share">
+            <a target="_blank" href="<?php echo $urbane_facebook_sharing_url; ?>"><i class="fa fa-facebook"></i></a>
+            <a target="_blank" href="<?php echo $urbane_twitter_sharing_url; ?>"><i
+                        class="fa fa-twitter"></i></a>
+            <a target="_blank" href="<?php echo $urbane_pinterest_sharing_url; ?>"><i
+                        class="fa fa-pinterest"></i></a>
+            <a target="_blank" href="<?php echo $urbane_linkedin_sharing_url; ?>"><i class="fa fa-linkedin"></i></a>
         </div>
         <?php
     }

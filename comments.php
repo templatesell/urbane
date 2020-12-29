@@ -15,61 +15,57 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
+
 if ( post_password_required() ) {
 	return;
 }
-?>
+$fields =  array(
+    'author' => '<div class="row"><div class="col-sm-6"><input type="text" name="author" id="author" class="input-form" placeholder="'.esc_attr__('Your name *', 'urbane').'" /></div>',
+    'email'  => '<div class="col-sm-6"><input type="text" name="email" id="email" class="input-form" placeholder="'.esc_attr__('Your email *', 'urbane').'"/></div>',
+    'website'=>'<div class="col-sm-12"><input type="text" name="url" id="url" class="input-form" placeholder="'.esc_attr__('Website URL', 'urbane').'"/></div></div>'
 
+);
+$custom_comment_form = array(
+    'fields'                => apply_filters( 'urbane_comment_form_default_fields', $fields ),
+    'comment_field'         => '<textarea name="comment" id="comment" class="textarea-form" placeholder="'.esc_attr__('Your comment ...', 'urbane').'"  rows="1"></textarea>',
+    'logged_in_as'          => '<p class="logged-in-as">' . esc_html__('Logged in as', 'urbane') .' <a href="'.admin_url('profile.php').'">'. $user_identity .'</a> <a href="'. wp_logout_url( apply_filters( 'urbane_the_permalink', get_permalink() ) ) .'">'. esc_html__('Log out?', 'urbane'). '</a></p>',
+    'cancel_reply_link'     => esc_html__( 'Cancel' , 'urbane' ),
+    'comment_notes_before'  => '',
+    'comment_notes_after'   => '',
+    'title_reply'           => esc_html__('Leave a Reply', 'urbane'),
+    'label_submit'          => esc_html__( 'Post Comment' , 'urbane' ),
+    'id_submit'             => 'submit',
+);?>
+<?php if ( have_comments() ) : ?>
 <div id="comments" class="comments-area">
-
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		?>
-		<h2 class="comments-title">
-			<?php
-			$urbane_comment_count = get_comments_number();
-			if ( '1' === $urbane_comment_count ) {
-				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'urbane' ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $urbane_comment_count, 'comments title', 'urbane' ) ),
-					number_format_i18n( $urbane_comment_count ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			}
-			?>
-		</h2><!-- .comments-title -->
-
-		<?php the_comments_navigation(); ?>
-		<div class="comment-list-wrap">
-			<ol class="comment-list">
-				<?php
-				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				) );
-				?>
-			</ol><!-- .comment-list -->
-		</div>
+    <?php if ( comments_open() ) : ?>
+        <h3 class="comments-title"><?php comments_number( null, esc_html__('1 Comment', 'urbane'), '% ' . esc_html__('Comments', 'urbane') ); ?></h3>
+   	<?php endif; ?>
+	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+	<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'urbane' ); ?></h1>
+		<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'urbane' ) ); ?></div>
+		<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'urbane' ) ); ?></div>
+	</nav>
+	<?php endif; ?>    
+	<ol class="comment-list">
 		<?php
-		the_comments_navigation();
-
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) :
-			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'urbane' ); ?></p>
-			<?php
-		endif;
-
-	endif; // Check for have_comments().
-
-	comment_form();
-	?>
-
-</div><!-- #comments -->
+			wp_list_comments( array(
+				'style'       => 'ol',
+				'short_ping'  => true,
+			) );
+		?>
+	</ol>    
+	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+	<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'urbane' ); ?></h1>
+		<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'urbane' ) ); ?></div>
+		<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'urbane' ) ); ?></div>
+	</nav>
+	<?php endif; ?>    
+	<?php if ( ! comments_open() ) : ?>
+	<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'urbane' ); ?></p>
+	<?php endif; ?>
+</div>
+<?php endif; ?>
+<?php comment_form($custom_comment_form); ?>

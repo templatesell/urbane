@@ -31,8 +31,6 @@ if (!function_exists('urbane_dynamic_css')) :
             a.effect:before,
             .show-more,
             a.link-format,
-            .comment-form #submit:hover, 
-            .comment-form #submit:focus,
             .meta_bottom .post-share a:hover,
             .tabs-nav li:before,
             .post-slider-section .s-cat,

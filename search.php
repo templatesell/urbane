@@ -25,7 +25,7 @@ get_header();
 				// breadcrumb hook
 				do_action('urbane_breadcrumb_options_hook'); ?> 
 			</div>
-			<div id="primary" class="col-md-8 content-area">
+			<div id="primary" class="col-md-8 col-lg-9 col-xs-12 content-area">
 				<main id="main" class="site-main">
 					<?php if ( have_posts() ) : ?>
 					<?php

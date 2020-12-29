@@ -12,7 +12,7 @@ get_header();
 <section id="content" class="site-content posts-container">
 	<div class="container">
 		<div class="row">
-			<div id="primary" class="col-md-12 page-404-container">
+			<div id="primary" class="col-md-8 col-lg-9 col-xs-12 page-404-container">
 				<main id="main" class="site-main">
 					<div class="page-404-content">
 						<h1 class="error-code"><?php esc_html_e( '404', 'urbane' ); ?></h1>

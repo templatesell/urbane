@@ -21,11 +21,13 @@ $author = absint($urbane_theme_options['urbane-show-hide-author']);
         <?php if(has_post_thumbnail()) { ?>
             <div class="post-media">
                 <?php urbane_post_thumbnail(); ?>
+                <div class="meta_bottom">
                 <?php 
                 if( 1 == $social_share ){
                     do_action( 'urbane_social_sharing' ,get_the_ID() );
                 }
                 ?>
+            </div>
             </div>
         <?php } ?>
         <div class="post-content">

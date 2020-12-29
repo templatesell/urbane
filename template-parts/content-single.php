@@ -63,11 +63,16 @@ $image = absint($urbane_theme_options['urbane-single-page-featured-image']);
                 ?>
             </div><!-- .entry-content -->
             <footer class="post-footer entry-footer">
-                <?php 
-                if( 1 == $social_share ){
-                    do_action( 'urbane_social_sharing' ,get_the_ID() );
-                }
-                ?>
+                <div class="meta_bottom">
+                    <div class="post-tags">
+                        <i class="fa fa-tag"></i> <?php urbane_entry_meta(); ?>
+                    </div>
+                    <?php 
+                    if( 1 == $social_share ){
+                        do_action( 'urbane_social_sharing' ,get_the_ID() );
+                    }
+                    ?>
+                </div>
             </footer><!-- .entry-footer -->
             <?php the_post_navigation(); ?>
         </div>
