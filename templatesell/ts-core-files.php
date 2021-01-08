@@ -81,3 +81,8 @@ require get_template_directory() . '/templatesell/hooks/masonry.php';
 require get_template_directory() . '/templatesell/filters/excerpt.php';
 require get_template_directory() . '/templatesell/filters/jetpack-widget.php';
 require get_template_directory() . '/templatesell/filters/body-class.php';
+
+/**
+ * Load Block Pattern
+ */
+require get_template_directory() . '/templatesell/patterns/block-pattern.php';

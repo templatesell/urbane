@@ -108,3 +108,15 @@ function urbane_block_styles() {
 
 add_action( 'enqueue_block_editor_assets', 'urbane_block_styles' );
 
+
+/**
+ * Enqueue Style for block pattern.
+ */
+function prefer_blog_block_style() {
+
+    /*Block Pattern*/
+    if (is_admin()) {
+        wp_enqueue_style( 'urbane-block-style', get_template_directory_uri() . '/templatesell/patterns/block-style.css');
+    }
+}
+add_action( 'enqueue_block_assets', 'prefer_blog_block_style');
