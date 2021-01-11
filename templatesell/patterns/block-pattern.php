@@ -147,5 +147,230 @@ if ( function_exists( 'register_block_pattern' ) ) {
 				',
 		)
 	);
+	register_block_pattern(
+		'urbane/about',
+		array(
+			'title'       => __( 'About Us', 'urbane' ),
+			'categories'  => array( 'urbane' ),
+			'keywords'    => array( __( 'Contact', 'urbane' ), __( 'User', 'urbane' ) ),
+			'description' => __( 'A contact form pattern with form, email ,phone, etc.', 'urbane' ),
+			'content'     => '
+			<!-- wp:group -->
+			<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:group -->
+			<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:columns {"verticalAlignment":"center"} -->
+			<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
+			<div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading -->
+			<h2>Career Start</h2>
+			<!-- /wp:heading -->
 
+			<!-- wp:paragraph -->
+			<p>Decommissioned planes are brought to this boneyard in Tucson, Arizona because of dry climate and hard desert soil. It’s easier to preserve the machines in dry air, and their wheels easily roll on the desert soil. Some of the planes come here to be modernized and get back into the air. Some become spare part donors. And some are recycled to get .</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons"><!-- wp:button {"borderRadius":4,"backgroundColor":"black","textColor":"white"} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-black-background-color has-text-color has-background" style="border-radius:4px">Read More</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:buttons --></div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"verticalAlignment":"center"} -->
+			<div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"right","id":57,"sizeSlug":"large"} -->
+			<div class="wp-block-image"><figure class="alignright size-large"><img src="http://localhost:8080/polite/wp-content/uploads/2020/02/t13-806x1024.jpg" alt="" class="wp-image-57"/></figure></div>
+			<!-- /wp:image --></div>
+			<!-- /wp:column --></div>
+			<!-- /wp:columns --></div></div>
+			<!-- /wp:group --></div></div>
+			<!-- /wp:group -->
+			',
+		)
+	);
+
+	register_block_pattern(
+		'urbane/promo',
+		array(
+			'title'       => __( 'Promo', 'urbane' ),
+			'categories'  => array( 'urbane' ),
+			'keywords'    => array( __( 'Contact', 'urbane' ), __( 'User', 'urbane' ) ),
+			'description' => __( 'A contact form pattern with form, email ,phone, etc.', 'urbane' ),
+			'content'     => '
+			<!-- wp:group -->
+			<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:columns -->
+			<div class="wp-block-columns"><!-- wp:column -->
+			<div class="wp-block-column"><!-- wp:image {"id":151,"sizeSlug":"large"} -->
+			<figure class="wp-block-image size-large"><img src="http://localhost:8080/polite/wp-content/uploads/2020/03/p14-1024x538.jpg" alt="" class="wp-image-151"/><figcaption>NUTRITION STRATEGIES</figcaption></figure>
+			<!-- /wp:image --></div>
+			<!-- /wp:column -->
+
+			<!-- wp:column -->
+			<div class="wp-block-column"><!-- wp:image {"id":150,"sizeSlug":"large"} -->
+			<figure class="wp-block-image size-large"><img src="http://localhost:8080/polite/wp-content/uploads/2020/03/p13-1024x538.jpg" alt="" class="wp-image-150"/><figcaption>NUTRITION STRATEGIES</figcaption></figure>
+			<!-- /wp:image --></div>
+			<!-- /wp:column -->
+
+			<!-- wp:column -->
+			<div class="wp-block-column"><!-- wp:image {"id":149,"sizeSlug":"large"} -->
+			<figure class="wp-block-image size-large"><img src="http://localhost:8080/polite/wp-content/uploads/2020/03/p12-1024x538.jpg" alt="" class="wp-image-149"/><figcaption>NUTRITION STRATEGIES</figcaption></figure>
+			<!-- /wp:image --></div>
+			<!-- /wp:column --></div>
+			<!-- /wp:columns --></div></div>
+			<!-- /wp:group -->
+			',
+		)
+	);
+
+	register_block_pattern(
+		'urbane/left-image',
+		array(
+			'title'       => __( 'About Two', 'urbane' ),
+			'categories'  => array( 'urbane' ),
+			'keywords'    => array( __( 'Contact', 'urbane' ), __( 'User', 'urbane' ) ),
+			'description' => __( 'A contact form pattern with form, email ,phone, etc.', 'urbane' ),
+			'content'     => '
+				<!-- wp:group -->
+				<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:columns {"verticalAlignment":"center"} -->
+				<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
+				<div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"left","id":19,"sizeSlug":"large"} -->
+				<div class="wp-block-image"><figure class="alignleft size-large"><img src="http://localhost:8080/polite/wp-content/uploads/2020/02/b2-943x1024.jpg" alt="" class="wp-image-19"/></figure></div>
+				<!-- /wp:image --></div>
+				<!-- /wp:column -->
+
+				<!-- wp:column {"verticalAlignment":"center"} -->
+				<div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading -->
+				<h2>About Me</h2>
+				<!-- /wp:heading -->
+
+				<!-- wp:paragraph -->
+				<p>Decommissioned planes are brought to this boneyard in Tucson, Arizona because of dry climate and hard desert soil. It’s easier to preserve the machines in dry air, and their wheels easily roll on the desert soil. Some of the planes come here to be modernized and get back into the air. Some become spare part donors. And some are recycled to get .</p>
+				<!-- /wp:paragraph --></div>
+				<!-- /wp:column --></div>
+				<!-- /wp:columns --></div></div>
+				<!-- /wp:group -->
+			',
+		)
+	);
+
+	register_block_pattern(
+		'urbane/grid',
+		array(
+			'title'       => __( 'Grid', 'urbane' ),
+			'categories'  => array( 'urbane' ),
+			'keywords'    => array( __( 'Contact', 'urbane' ), __( 'User', 'urbane' ) ),
+			'description' => __( 'A contact form pattern with form, email ,phone, etc.', 'urbane' ),
+			'content'     => '
+				<!-- wp:group -->
+			<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:columns -->
+			<div class="wp-block-columns"><!-- wp:column {"className":"col-bg"} -->
+			<div class="wp-block-column col-bg"><!-- wp:image {"id":145,"sizeSlug":"full"} -->
+			<figure class="wp-block-image size-full"><img src="http://localhost:8080/polite/wp-content/uploads/2020/03/p8.jpg" alt="" class="wp-image-145"/></figure>
+			<!-- /wp:image -->
+
+			<!-- wp:heading {"align":"center","level":3} -->
+			<h3 class="has-text-align-center">Title Here</h3>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"align":"center"} -->
+			<p class="has-text-align-center">Decommissioned planes are brought to this boneyard in Tucson, Arizona because of dry climate and hard desert soil. It’s easier to preserve the machines in dry air, and their wheels easily roll on the desert soil.</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":"col-bg"} -->
+			<div class="wp-block-column col-bg"><!-- wp:image {"id":145,"sizeSlug":"full"} -->
+			<figure class="wp-block-image size-full"><img src="http://localhost:8080/polite/wp-content/uploads/2020/03/p8.jpg" alt="" class="wp-image-145"/></figure>
+			<!-- /wp:image -->
+
+			<!-- wp:heading {"align":"center","level":3} -->
+			<h3 class="has-text-align-center">Title Here</h3>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"align":"center"} -->
+			<p class="has-text-align-center">Decommissioned planes are brought to this boneyard in Tucson, Arizona because of dry climate and hard desert soil. It’s easier to preserve the machines in dry air, and their wheels easily roll on the desert soil.</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":"col-bg"} -->
+			<div class="wp-block-column col-bg"><!-- wp:image {"id":145,"sizeSlug":"full"} -->
+			<figure class="wp-block-image size-full"><img src="http://localhost:8080/polite/wp-content/uploads/2020/03/p8.jpg" alt="" class="wp-image-145"/></figure>
+			<!-- /wp:image -->
+
+			<!-- wp:heading {"align":"center","level":3} -->
+			<h3 class="has-text-align-center">Title Here</h3>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"align":"center"} -->
+			<p class="has-text-align-center">Decommissioned planes are brought to this boneyard in Tucson, Arizona because of dry climate and hard desert soil. It’s easier to preserve the machines in dry air, and their wheels easily roll on the desert soil.</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:column --></div>
+			<!-- /wp:columns --></div></div>
+			<!-- /wp:group -->
+			',
+		)
+	);
+
+	register_block_pattern(
+		'urbane/project',
+		array(
+			'title'       => __( 'Project', 'urbane' ),
+			'categories'  => array( 'urbane' ),
+			'keywords'    => array( __( 'Contact', 'urbane' ), __( 'User', 'urbane' ) ),
+			'description' => __( 'A contact form pattern with form, email ,phone, etc.', 'urbane' ),
+			'content'     => '
+				<!-- wp:group -->
+				<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:columns -->
+				<div class="wp-block-columns"><!-- wp:column {"className":"col-bg"} -->
+				<div class="wp-block-column col-bg"><!-- wp:image {"id":112,"sizeSlug":"large"} -->
+				<figure class="wp-block-image size-large"><img src="http://localhost:8080/polite/wp-content/uploads/2020/01/p3-1024x576.jpg" alt="" class="wp-image-112"/></figure>
+				<!-- /wp:image -->
+
+				<!-- wp:buttons {"align":"center"} -->
+				<div class="wp-block-buttons aligncenter"><!-- wp:button {"borderRadius":4} -->
+				<div class="wp-block-button"><a class="wp-block-button__link" style="border-radius:4px">Project</a></div>
+				<!-- /wp:button -->
+
+				<!-- wp:button {"borderRadius":0,"backgroundColor":"white","textColor":"black"} -->
+				<div class="wp-block-button"><a class="wp-block-button__link has-black-color has-white-background-color has-text-color has-background no-border-radius">JANUARY 05, 20</a></div>
+				<!-- /wp:button --></div>
+				<!-- /wp:buttons -->
+
+				<!-- wp:heading {"align":"center"} -->
+				<h2 class="has-text-align-center">Super Healthy Drinks</h2>
+				<!-- /wp:heading -->
+
+				<!-- wp:buttons {"align":"center"} -->
+				<div class="wp-block-buttons aligncenter"><!-- wp:button {"borderRadius":0,"backgroundColor":"white","textColor":"black"} -->
+				<div class="wp-block-button"><a class="wp-block-button__link has-black-color has-white-background-color has-text-color has-background no-border-radius">READ MORE</a></div>
+				<!-- /wp:button --></div>
+				<!-- /wp:buttons --></div>
+				<!-- /wp:column -->
+
+				<!-- wp:column {"className":"col-bg"} -->
+				<div class="wp-block-column col-bg"><!-- wp:image {"id":111,"sizeSlug":"large"} -->
+				<figure class="wp-block-image size-large"><img src="http://localhost:8080/polite/wp-content/uploads/2020/01/p2-1024x576.jpg" alt="" class="wp-image-111"/></figure>
+				<!-- /wp:image -->
+
+				<!-- wp:buttons {"align":"center"} -->
+				<div class="wp-block-buttons aligncenter"><!-- wp:button {"borderRadius":4} -->
+				<div class="wp-block-button"><a class="wp-block-button__link" style="border-radius:4px">Project</a></div>
+				<!-- /wp:button -->
+
+				<!-- wp:button {"borderRadius":0,"backgroundColor":"white","textColor":"black"} -->
+				<div class="wp-block-button"><a class="wp-block-button__link has-black-color has-white-background-color has-text-color has-background no-border-radius">JANUARY 05, 20</a></div>
+				<!-- /wp:button --></div>
+				<!-- /wp:buttons -->
+
+				<!-- wp:heading {"align":"center"} -->
+				<h2 class="has-text-align-center">Super Healthy Drinks</h2>
+				<!-- /wp:heading -->
+
+				<!-- wp:buttons {"align":"center"} -->
+				<div class="wp-block-buttons aligncenter"><!-- wp:button {"borderRadius":0,"backgroundColor":"white","textColor":"black"} -->
+				<div class="wp-block-button"><a class="wp-block-button__link has-black-color has-white-background-color has-text-color has-background no-border-radius">READ MORE</a></div>
+				<!-- /wp:button --></div>
+				<!-- /wp:buttons --></div>
+				<!-- /wp:column --></div>
+				<!-- /wp:columns --></div></div>
+				<!-- /wp:group -->
+			',
+		)
+	);
 }

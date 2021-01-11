@@ -27,3 +27,18 @@
     margin-bottom: 15px !important;
     margin-top: 15px !important;
 }
+
+.wp-block-image{
+	position: relative;
+}
+.wp-block-image figcaption {
+    padding: 15px 5px;
+    position: absolute;
+    bottom: 30px;
+    display: block;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}

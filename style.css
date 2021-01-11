@@ -2023,7 +2023,7 @@ section.slider-wrapper {
     right: 15px;
     bottom: 15px;
     border: 1px solid #ec407a;
-    z-index: 1;
+    z-index: -1;
     opacity: 0.7;
 }
 .slide-wrap .caption h2 a{
@@ -6383,16 +6383,39 @@ div#urbane-breadcrumbs {
     line-height: 1.6;
     color: #4c4f53;
 }
+.wp-block-image {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.wp-block-image figure {
+  position: relative;
+}
+.wp-block-image figcaption {
+  padding: 15px 5px;
+  position: absolute;
+  bottom: 30px;
+  display: block;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  background: #fff;
+}
 
 /* image */
 .post-excerpt figure.wp-block-image,
 .post-excerpt .wp-block-image figure {
     margin: 0 0 20px;
     padding: 5px 0 0;
+    position: relative;
 }
 .post-excerpt .wp-block-image figcaption {
-    margin-bottom: -5px;
-    padding: 10px 0 0;
+    margin:0 auto;
+    padding: 5px;
+    text-align: center;
+
 }
 .post-excerpt .wp-block-image .alignleft {
     float: left;
@@ -6924,6 +6947,9 @@ div#urbane-breadcrumbs {
     margin-right: -33px !important;
 }
 
+.col-bg{
+    background: #fefefe;
+}
 /*Header Cart*/
 
 .cart-right {
