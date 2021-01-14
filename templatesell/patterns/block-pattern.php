@@ -176,7 +176,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 
 			<!-- wp:column {"verticalAlignment":"center"} -->
 			<div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"right","id":57,"sizeSlug":"large"} -->
-			<div class="wp-block-image"><figure class="alignright size-large"><img src="http://localhost:8080/polite/wp-content/uploads/2020/02/t13-806x1024.jpg" alt="" class="wp-image-57"/></figure></div>
+			<div class="wp-block-image"><figure class="alignright size-large"><img src="' . esc_url( get_theme_file_uri( 'templatesell/patterns/images/p2.jpg' ) ) . '" alt="" class="wp-image-57"/></figure></div>
 			<!-- /wp:image --></div>
 			<!-- /wp:column --></div>
 			<!-- /wp:columns --></div></div>
@@ -198,19 +198,19 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:columns -->
 			<div class="wp-block-columns"><!-- wp:column -->
 			<div class="wp-block-column"><!-- wp:image {"id":151,"sizeSlug":"large"} -->
-			<figure class="wp-block-image size-large"><img src="http://localhost:8080/polite/wp-content/uploads/2020/03/p14-1024x538.jpg" alt="" class="wp-image-151"/><figcaption>NUTRITION STRATEGIES</figcaption></figure>
+			<figure class="wp-block-image size-large"><img src="' . esc_url( get_theme_file_uri( 'templatesell/patterns/images/p3.jpg' ) ) . '" alt="" class="wp-image-151"/><figcaption>NUTRITION STRATEGIES</figcaption></figure>
 			<!-- /wp:image --></div>
 			<!-- /wp:column -->
 
 			<!-- wp:column -->
 			<div class="wp-block-column"><!-- wp:image {"id":150,"sizeSlug":"large"} -->
-			<figure class="wp-block-image size-large"><img src="http://localhost:8080/polite/wp-content/uploads/2020/03/p13-1024x538.jpg" alt="" class="wp-image-150"/><figcaption>NUTRITION STRATEGIES</figcaption></figure>
+			<figure class="wp-block-image size-large"><img src="' . esc_url( get_theme_file_uri( 'templatesell/patterns/images/p4.jpg' ) ) . '" alt="" class="wp-image-150"/><figcaption>NUTRITION STRATEGIES</figcaption></figure>
 			<!-- /wp:image --></div>
 			<!-- /wp:column -->
 
 			<!-- wp:column -->
 			<div class="wp-block-column"><!-- wp:image {"id":149,"sizeSlug":"large"} -->
-			<figure class="wp-block-image size-large"><img src="http://localhost:8080/polite/wp-content/uploads/2020/03/p12-1024x538.jpg" alt="" class="wp-image-149"/><figcaption>NUTRITION STRATEGIES</figcaption></figure>
+			<figure class="wp-block-image size-large"><img src="' . esc_url( get_theme_file_uri( 'templatesell/patterns/images/p5.jpg' ) ) . '" alt="" class="wp-image-149"/><figcaption>NUTRITION STRATEGIES</figcaption></figure>
 			<!-- /wp:image --></div>
 			<!-- /wp:column --></div>
 			<!-- /wp:columns --></div></div>
@@ -231,7 +231,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 				<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:columns {"verticalAlignment":"center"} -->
 				<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
 				<div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"left","id":19,"sizeSlug":"large"} -->
-				<div class="wp-block-image"><figure class="alignleft size-large"><img src="http://localhost:8080/polite/wp-content/uploads/2020/02/b2-943x1024.jpg" alt="" class="wp-image-19"/></figure></div>
+				<div class="wp-block-image"><figure class="alignleft size-large"><img src="' . esc_url( get_theme_file_uri( 'templatesell/patterns/images/p1.jpg' ) ) . '" alt="" class="wp-image-19"/></figure></div>
 				<!-- /wp:image --></div>
 				<!-- /wp:column -->
 
@@ -262,7 +262,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:columns -->
 			<div class="wp-block-columns"><!-- wp:column {"className":"col-bg"} -->
 			<div class="wp-block-column col-bg"><!-- wp:image {"id":145,"sizeSlug":"full"} -->
-			<figure class="wp-block-image size-full"><img src="http://localhost:8080/polite/wp-content/uploads/2020/03/p8.jpg" alt="" class="wp-image-145"/></figure>
+			<figure class="wp-block-image size-full"><img src="' . esc_url( get_theme_file_uri( 'templatesell/patterns/images/p6.jpg' ) ) . '" alt="" class="wp-image-145"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"align":"center","level":3} -->
@@ -276,7 +276,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 
 			<!-- wp:column {"className":"col-bg"} -->
 			<div class="wp-block-column col-bg"><!-- wp:image {"id":145,"sizeSlug":"full"} -->
-			<figure class="wp-block-image size-full"><img src="http://localhost:8080/polite/wp-content/uploads/2020/03/p8.jpg" alt="" class="wp-image-145"/></figure>
+			<figure class="wp-block-image size-full"><img src="' . esc_url( get_theme_file_uri( 'templatesell/patterns/images/p4.jpg' ) ) . '" alt="" class="wp-image-145"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"align":"center","level":3} -->
@@ -290,7 +290,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 
 			<!-- wp:column {"className":"col-bg"} -->
 			<div class="wp-block-column col-bg"><!-- wp:image {"id":145,"sizeSlug":"full"} -->
-			<figure class="wp-block-image size-full"><img src="http://localhost:8080/polite/wp-content/uploads/2020/03/p8.jpg" alt="" class="wp-image-145"/></figure>
+			<figure class="wp-block-image size-full"><img src="' . esc_url( get_theme_file_uri( 'templatesell/patterns/images/p2.jpg' ) ) . '" alt="" class="wp-image-145"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"align":"center","level":3} -->
@@ -319,7 +319,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 				<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:columns -->
 				<div class="wp-block-columns"><!-- wp:column {"className":"col-bg"} -->
 				<div class="wp-block-column col-bg"><!-- wp:image {"id":112,"sizeSlug":"large"} -->
-				<figure class="wp-block-image size-large"><img src="http://localhost:8080/polite/wp-content/uploads/2020/01/p3-1024x576.jpg" alt="" class="wp-image-112"/></figure>
+				<figure class="wp-block-image size-large"><img src="' . esc_url( get_theme_file_uri( 'templatesell/patterns/images/p3.jpg' ) ) . '" alt="" class="wp-image-112"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:buttons {"align":"center"} -->
@@ -345,7 +345,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 
 				<!-- wp:column {"className":"col-bg"} -->
 				<div class="wp-block-column col-bg"><!-- wp:image {"id":111,"sizeSlug":"large"} -->
-				<figure class="wp-block-image size-large"><img src="http://localhost:8080/polite/wp-content/uploads/2020/01/p2-1024x576.jpg" alt="" class="wp-image-111"/></figure>
+				<figure class="wp-block-image size-large"><img src="' . esc_url( get_theme_file_uri( 'templatesell/patterns/images/p5.jpg' ) ) . '" alt="" class="wp-image-111"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:buttons {"align":"center"} -->
