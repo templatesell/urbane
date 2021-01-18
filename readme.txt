@@ -5,7 +5,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Requires at least: 4.5
 Requires PHP: 4.7
 Tested up to: 5.6
-Stable tag: 1.2.0
+Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,10 @@ Urbane includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.1 - January 18 2021 =
+* Added Block Patterns
+* Fixed some minor css issues
+
 = 1.0.0 - December 21 2020 =
 * Initial release
 
@@ -47,11 +51,8 @@ Urbane is distributed under the terms of the GNU GPL v2 or later.
 * Font-Awesome https://github.com/FortAwesome/Font-Awesome FontAwesome 4.6.3 Copyright 2012 Dave Gandy Font License: SIL OFL 1.1 Code License: MIT License http://fontawesome.io/license/
 * imagesLoaded MIT License https://imagesloaded.desandro.com/#mit-license
 
-Image for Block Pattern Author, Copyright Ilya Yakover
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://stocksnap.io/photo/people-girl-Q2WJXI3CSE
 
-== Screenshot Images [CCO License] ==
+== Block Patters & Screenshot Images [CCO License] ==
 Image for theme screenshot, Copyright Foodie Girl
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/cookies-dessert-BSLV1NZFJ3
@@ -75,5 +76,9 @@ Source: https://stocksnap.io/photo/woman-walking-YE8TQVJ00L
 Image for theme screenshot, Copyright Kristin Hardwick
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/browsing-smartphone-JXOLOKSWX2
+
+Image for Block Pattern Author, Copyright Ilya Yakover
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/people-girl-Q2WJXI3CSE
 
 * Sidbear icons for the customizer are self created and license under GPL.
