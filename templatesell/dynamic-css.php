@@ -82,7 +82,7 @@ if (!function_exists('urbane_dynamic_css')) :
             .main-header a:active,
             .top-menu > ul > li > a:hover,
             .main-menu ul li.current-menu-item > a, 
-            .main-menu ul li.menu-item-has-children > a,
+            .main-menu ul li.current-menu-parent > a,
             .header-2 .main-menu > ul > li.current-menu-item > a,
             .main-menu ul li:hover > a,
             .main-menu ul ul li:hover > a,
