@@ -63,7 +63,7 @@
         var _header = $('.head_one');
         var _LogoItem = $(_header).find('.center-logo');
         _LogoItem.each(function(){
-            $(this).removeClass('col-sm-4 col-sm-8');
+            $(this).removeClass('col-sm-4 col-sm-8 text-left text-right ');
             $(this).addClass('col-sm-12 text-center');
         });
     } 

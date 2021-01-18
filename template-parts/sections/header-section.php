@@ -61,7 +61,7 @@ $logo_position = esc_attr($urbane_theme_options['urbane_logo_position_option']);
 		<div class="head_one  clearfix ">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-4 <?php echo esc_attr($logo_position); ?>">
+					<div class="<?php echo esc_attr($logo_position); ?> col-sm-4">
 						<div class="logo">
 							<?php
 							the_custom_logo();
@@ -82,8 +82,8 @@ $logo_position = esc_attr($urbane_theme_options['urbane_logo_position_option']);
 						</div><!-- .site-logo -->
 					</div>
 					<?php if(!empty($ads_header)): ?>
-					<div class="col-sm-8 <?php echo esc_attr($logo_position); ?>">
-						<div class="add__banner text-right">
+					<div class="<?php echo esc_attr($logo_position); ?> col-sm-8 text-right">
+						<div class="add__banner">
 						    <a href="<?php echo esc_url($ads_link); ?>" target="_blank">
 						        <img src="<?php echo esc_url($ads_header); ?>" alt="">
 						    </a>

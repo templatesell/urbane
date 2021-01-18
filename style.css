@@ -392,7 +392,6 @@ th {
         width: 1030px;
     }*/
 }
-
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -1673,10 +1672,12 @@ nav#site-navigation {
     border-bottom: 1px solid #f2f2f2;
 }
 .header-1 .head_one .logo{
-    margin: auto;
     max-width: 400px;
-    padding: 50px 0;
+    padding: 30px 0;
     float: none;
+}
+.header-1 .head_one .center-logo .logo{
+    margin: auto;
 }
 .header-1 .search-box i {
     line-height: 30px;
@@ -1779,7 +1780,12 @@ nav#site-navigation {
     }
 }
 
-
+@media (max-width: 767px){
+    .header-1 .head_one .left-logo .logo{
+        margin: auto;
+        text-align: center;
+    }
+}
 /*==============================================================
 ## Main Banner CSS
 ================================================================*/
@@ -2462,7 +2468,28 @@ article.format-status .post-content .post-format::after{
 .post-media {
     position: relative;
 }
-
+.has-post-thumbnail .post-media a.post-image{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    background-color: #f5f5f5;
+}
+.has-post-thumbnail .post-media a.post-image:after {
+    content: "";
+    width: 100%;
+    display: block;
+    padding-top: 68%;
+}
+.has-post-thumbnail .left-image .post-media  a.post-image:after {
+    content: "";
+    width: 100%;
+    display: block;
+    padding-top: 100%;
+}
+.masonry-start .masonry-post:nth-child(2n) .post-media a::after {
+    padding-top: 115%;
+}
 /***
 ====================================================================
 ## Post media: slider (gallery)
@@ -5950,7 +5977,9 @@ div#urbane-breadcrumbs {
     overflow: hidden;
     padding: 15px 0;
     display: table;
-    width: 100%;
+    /*width: 100%;*/
+    margin-right: -15px;
+    margin-left: -15px;
 }
 .left-image .post-content,
 .left-image .post-media{
@@ -5961,6 +5990,10 @@ div#urbane-breadcrumbs {
 .left-image .post-media{
     max-width: 350px;
     min-width: 300px;
+}
+.no-sidebar .left-image .post-media{
+    max-width: 400px;
+    min-width: 350px;
 }
 .two-column .left-image,
 .masonry-post .left-image,
@@ -7178,11 +7211,13 @@ div#urbane-breadcrumbs {
     .right-sidebar #primary{
         float: none;
     }
+    .no-sidebar .left-image .post-media,
     .left-image .post-content,
     .left-image .post-media{
         display: block;
-        max-width: 100%
+        max-width: 100%;
         min-width:100%;
+        padding-bottom: 15px;
     }
     .blog.left-sidebar #primary, 
     .archive.left-sidebar #primary, 
