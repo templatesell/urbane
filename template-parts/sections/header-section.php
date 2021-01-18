@@ -58,10 +58,10 @@ $logo_position = esc_attr($urbane_theme_options['urbane_logo_position_option']);
 	$header_class = ($header_image == "") ? '' : 'header-image';
 	?>
 	<section class="main-header <?php echo esc_attr($header_class); ?>" style="background-image:url(<?php echo esc_url($header_image) ?>); background-size: cover; background-position: center; background-repeat: no-repeat;">
-		<div class="head_one clearfix <?php echo esc_attr($logo_position); ?>">
+		<div class="head_one  clearfix ">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-4">
+					<div class="col-sm-4 <?php echo esc_attr($logo_position); ?>">
 						<div class="logo">
 							<?php
 							the_custom_logo();
@@ -82,7 +82,7 @@ $logo_position = esc_attr($urbane_theme_options['urbane_logo_position_option']);
 						</div><!-- .site-logo -->
 					</div>
 					<?php if(!empty($ads_header)): ?>
-					<div class="col-sm-8">
+					<div class="col-sm-8 <?php echo esc_attr($logo_position); ?>">
 						<div class="add__banner text-right">
 						    <a href="<?php echo esc_url($ads_link); ?>" target="_blank">
 						        <img src="<?php echo esc_url($ads_header); ?>" alt="">
