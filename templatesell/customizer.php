@@ -13,6 +13,7 @@ if ( !function_exists('urbane_default_theme_options_values') ) :
 
           /*Logo Options*/
           'urbane_logo_width_option' => '600',
+          'urbane_logo_position_option'=> 'left-logo',
 
             /*Top Header*/
             'urbane_enable_top_header'=> 0, 

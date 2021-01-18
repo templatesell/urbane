@@ -16,6 +16,7 @@ $enable_social = absint($urbane_theme_options['urbane_enable_top_header_social']
 $search_header = absint($urbane_theme_options['urbane_enable_search']);
 $ads_header = esc_url($urbane_theme_options['urbane_enable_advertisement']);
 $ads_link = esc_url($urbane_theme_options['urbane_link_advertisement']);
+$logo_position = esc_attr($urbane_theme_options['urbane_logo_position_option']);
 ?>
 
 <header class="header-1">
@@ -57,7 +58,7 @@ $ads_link = esc_url($urbane_theme_options['urbane_link_advertisement']);
 	$header_class = ($header_image == "") ? '' : 'header-image';
 	?>
 	<section class="main-header <?php echo esc_attr($header_class); ?>" style="background-image:url(<?php echo esc_url($header_image) ?>); background-size: cover; background-position: center; background-repeat: no-repeat;">
-		<div class="head_one clearfix">
+		<div class="head_one clearfix <?php echo esc_attr($logo_position); ?>">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4">
