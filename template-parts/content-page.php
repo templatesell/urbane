@@ -11,6 +11,9 @@ $image_option = absint($urbane_theme_options['urbane-single-page-featured-image'
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="post-wrap">
+        <div class="page-title">
+            <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+        </div>
         <div class="post-media">
             <?php
             if ($image_option == 1) {
@@ -19,7 +22,6 @@ $image_option = absint($urbane_theme_options['urbane-single-page-featured-image'
             ?>
         </div>
         <div class="post-content">
-            <?php the_title('<h1 class="post-title entry-title">', '</h1>'); ?>
             <div class="post-excerpt entry-content">
                 <?php
                 
@@ -40,7 +42,6 @@ $image_option = absint($urbane_theme_options['urbane-single-page-featured-image'
             <!-- .entry-content end -->
             <footer class="post-footer entry-footer">
                 <?php urbane_entry_meta(); ?>
-                <?php do_action( 'urbane_social_sharing' ,get_the_ID() );?>
             </footer><!-- .entry-footer end -->
         </div>
     </div>

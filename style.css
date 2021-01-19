@@ -301,6 +301,54 @@ th {
     padding: 7px 0;
     text-align: center;
 }
+input[type="text"], input[type="email"], 
+input[type="search"], input[type="password"],
+input[type="tel"],textarea{
+    border: 1px solid #cccccc;
+    background: transparent;
+    padding: 12px 18px;
+    line-height: 24px;
+    color: #999;
+    width: 100%;
+    font-size: 15px;
+    font-weight: inherit;
+    background: #fff;
+}
+select{
+    border: 1px solid #eee;
+    padding: 12px 18px;
+    line-height: 24px;
+    color: #999;
+    width: 100%;
+    font-size: 15px;
+     -webkit-appearance: none; 
+   -moz-appearance: none;
+   appearance: none;
+    background-color: transparent;
+   background-image: url(assets/images/select.png);
+   background-repeat: no-repeat;
+   background-position: 95% center;
+}
+select:focus{
+    outline: none;
+}
+textarea{min-height: 150px;}
+::-webkit-input-placeholder {
+   color: inherit;
+   opacity: 1;
+}
+:-moz-placeholder {
+   color: inherit;
+   opacity: 1;  
+}
+::-moz-placeholder {
+   color: inherit;
+   opacity: 1;  
+}
+:-ms-input-placeholder {  
+   color: inherit;
+   opacity: 1;  
+}
 
 /* text-align */
 .aligncenter {
@@ -2142,6 +2190,10 @@ section.slider-wrapper {
     .slide-wrap .slider-height {
         height: 300px;
     }
+}
+
+.page-title .entry-title{
+    margin: 0 0 40px 0;
 }
 /**
 ================================================
@@ -4423,7 +4475,10 @@ article{
     width: 100%;
     padding:0 15px;
 }
-
+/*.page.no-sidebar .post-content {
+    max-width: 80%;
+    margin: 40px auto;
+}*/
 
 /* widget container */
 .widget {
@@ -7324,23 +7379,6 @@ div#urbane-breadcrumbs {
 
 /* 360px */
 @media (max-width: 360px) {
-
-    /* containers with content: reduce left and right indents to 15 pixels */
-    pre,
-    .post-content,
-    .no-results,
-    .about-author,
-    .comment-reply-title,
-    .comments-title,
-    .comment-form,
-    .comment-list-wrap,
-    .comments-area .no-comments,
-    .comment-respond .must-log-in{
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-
-
     /* wide-images */
     .alignwide,
     .alignfull {
@@ -7464,7 +7502,33 @@ div#urbane-breadcrumbs {
     }
 }
 
-
+/*CONTACT 7 FORM CSS*/
+.wpcf7-form .wpcf7-form-control-wrap{
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+}
+.wpcf7-form-control.wpcf7-submit{
+    text-align: center;
+    padding: 13px 25px;
+    background-color: #ec407a;
+    font-weight: 500;
+    color: #fff;
+    display: inline-block;
+    border: none;
+    border-radius:2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    font-size: 13px;
+    letter-spacing: 2px;
+    line-height: 24px;
+    cursor: pointer;
+}
+.wpcf7-form-control.wpcf7-submit:hover, 
+.wpcf7-form-control.wpcf7-submit:focus {
+    background-color: #333;
+    color: #fff;
+}
 /*EXTRA CSS*/
 .pro-btn a:after {
     background: #00cf24;
