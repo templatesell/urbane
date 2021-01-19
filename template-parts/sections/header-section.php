@@ -99,8 +99,8 @@ $logo_position = esc_attr($urbane_theme_options['urbane_logo_position_option']);
 					<?php if( 1 == $search_header ){ ?>
 						<div class="search-wrapper">					
 							<div class="search-box">
-								<a href="javascript:void(0);" class="s_click"><i class="fa fa-search first_click" aria-hidden="true" style="display: block;"></i></a>
-								<a href="javascript:void(0);" class="s_click"><i class="fa fa-times second_click" aria-hidden="true" style="display: none;"></i></a>
+								<a href="#" class="s_click"><i class="fa fa-search first_click" aria-hidden="true" style="display: block;"></i></a>
+								<a href="#" class="s_click"><i class="fa fa-times second_click" aria-hidden="true" style="display: none;"></i></a>
 							</div>
 							<div class="search-box-text">
 								<?php echo get_search_form(); ?>

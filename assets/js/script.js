@@ -68,5 +68,30 @@
         });
     } 
     LogoCenter();
+
+/*--------------------------------------------------------------
+ Keyboard Navigation
+----------------------------------------------------------------*/
+  if ($(window).width() < 1024) {
+    $("#primary-menu")
+      .find("li")
+      .last()
+      .bind("keydown", function (e) {
+        if (e.which === 9) {
+          e.preventDefault();
+          $("#site-navigation").find(".bar-menu").focus();
+        }
+      });
+
+    $("#primary-menu > li:last-child button:not(.active)").bind("keydown", function (e) {
+      if (e.which === 9) {
+        e.preventDefault();
+        $("#site-navigation").find(".bar-menu").focus();
+      }
+    });
+  } else {
+    $("#primary-menu").find("li").unbind("keydown");
+  }
+
     
 })(jQuery);
