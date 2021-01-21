@@ -2658,7 +2658,9 @@ object {
     padding-bottom: 0;
 }
 
-
+.post-content p a{
+    text-decoration: underline!important;
+}
 
 /* date */
 .post-date {
@@ -4419,7 +4421,7 @@ input[type="radio"]:checked:before {
 .archive.middle-column .posts-container .container,
 .page.middle-column .posts-container .container,
 .single.single-middle-column .posts-container .container{
-    width: 70%;
+    width: 60%;
     margin :auto;
 }
 
@@ -4704,7 +4706,9 @@ article{
     font-size: 80%;
     color: #989ea6;
 }
-
+.widget_recent_entries li a {
+    text-decoration: underline !important;
+}
 
 /**
  * Widget: Tag Cloud
@@ -4819,19 +4823,19 @@ article{
  * -------------------------------------------------------------
  */
 
-#recentcomments {
-    list-style: none;
+.widget_recent_comments ul {
     margin: 0;
     padding: 0;
 }
-#recentcomments li {
+.widget_recent_comments li {
     margin-bottom: 10px;
+    list-style: none;
 }
-#recentcomments li:last-child {
+.widget_recent_comments li:last-child {
     margin-bottom: 0;
 }
-#recentcomments li .comment-author-link a,
-#recentcomments li a {
+.widget_recent_comments li .comment-author-link a,
+.widget_recent_comments li a {
     text-decoration: underline !important;
 }
 
@@ -6021,7 +6025,7 @@ div#urbane-breadcrumbs {
 
 /* Blog Images options */
 
-.left-image{
+.one-column .left-image{
     overflow: hidden;
     padding: 15px 0;
     display: table;
@@ -6029,13 +6033,13 @@ div#urbane-breadcrumbs {
     margin-right: -15px;
     margin-left: -15px;
 }
-.left-image .post-content,
-.left-image .post-media{
+.one-column .left-image .post-content,
+.one-column .left-image .post-media{
     padding: 0 15px;
     vertical-align: middle;
     display: table-cell;
 }
-.left-image .post-media{
+.one-column .left-image .post-media{
     max-width: 350px;
     min-width: 300px;
 }
@@ -6059,16 +6063,20 @@ div#urbane-breadcrumbs {
 .alternative .left-image .post-content{
     display: block;
 }
+.middle-column .left-image .post-content, 
+.middle-column .left-image .post-media{
+    display: table-cell;
+}
 .two-column .left-image .post-media,
 .masonry-post .left-image .post-media,
 .alternative .left-image .post-media{
     padding:0;
 }
-.two-column .left-image .post-content,
+/*.two-column .left-image .post-content,
 .masonry-post .left-image .post-content,
 .alternative .left-image .post-content{
     padding:20px;
-}
+}*/
 
 .alternative article:nth-child(3n-2) .left-image{
     padding: 15px 0;

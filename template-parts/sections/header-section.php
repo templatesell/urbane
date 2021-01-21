@@ -95,7 +95,7 @@ $logo_position = esc_attr($urbane_theme_options['urbane_logo_position_option']);
 		</div>
 		<div class="menu-area">
 			<div class="container">					
-				<nav id="site-navigation">
+				<nav id="site-navigation" class="site-navigation">
 					<?php if( 1 == $search_header ){ ?>
 						<div class="search-wrapper">					
 							<div class="search-box">

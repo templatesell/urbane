@@ -19,25 +19,19 @@ $image_location = esc_attr($urbane_theme_options['urbane-blog-image-layout']);
         <?php } ?>
         <div class="post-content">
             <div class="date_title">
+                <?php the_title(sprintf('<h2 class="post-title entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
                 <div class="post-date">
                     <?php if ('post' === get_post_type()) : ?>
                         <div class="entry-meta">
-                            <?php
-                            urbane_posted_on();
-                            urbane_posted_by();
-                            ?>
+                            <i class="fa fa-user-o"></i> <?php urbane_posted_by(); ?>
+                            <i class="fa fa-calendar-o"></i><?php urbane_posted_on(); ?>
                         </div><!-- .entry-meta -->
                     <?php endif; ?>
                 </div>
-                <?php the_title(sprintf('<h2 class="post-title entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
             </div>
             <div class="post-excerpt entry-summary">
                 <?php the_excerpt(); ?>
             </div><!-- .entry-summary -->
-
-            <footer class="post-footer entry-footer">
-                <?php do_action( 'urbane_social_sharing' ,get_the_ID() );?>
-            </footer><!-- .entry-footer -->
         </div>
     </div>
 </article><!-- #post-->
