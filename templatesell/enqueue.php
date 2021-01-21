@@ -59,7 +59,7 @@ function urbane_scripts() {
     $max_num_pages = $wp_query->max_num_pages;
 
     wp_localize_script( 'urbane-custom', 'urbane_ajax', array(
-        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+        'ajaxurl' => esc_url(admin_url( 'admin-ajax.php' )),
         'paged'     => $paged,
         'max_num_pages'      => $max_num_pages,
         'next_posts'      => next_posts( $max_num_pages, false ),
@@ -87,12 +87,13 @@ add_action( 'wp_enqueue_scripts', 'urbane_scripts' );
 function urbane_block_styles() {
     wp_enqueue_style( 'urbane-editor-styles', get_theme_file_uri( 'css/editor-styles.css' ) );
 
-    wp_enqueue_style('urbane-editor-body', '//fonts.googleapis.com/css?family=Muli:400,400i,500,600,700&display=swap', array(), null);
+    /*body  */
+    wp_enqueue_style('urbane-editor-body', '//fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&display=swap', array(), null);
     /*heading  */
     wp_enqueue_style('urbane-editor-heading', '//fonts.googleapis.com/css?family=Prata&display=swap', array(), null);
 
     $urbane_custom_css = '
-    .edit-post-visual-editor.editor-styles-wrapper{ font-family: Muli;}
+    .edit-post-visual-editor.editor-styles-wrapper{ font-family: Poppins;}
 
     .editor-post-title__block .editor-post-title__input,
     .editor-styles-wrapper h1,

@@ -13,7 +13,7 @@ if( ! class_exists( 'Urbane_Radio_Image_Control' ) ) {
 
     class Urbane_Radio_Image_Control extends WP_Customize_Control {
         
-        public $type = 'radio-image';
+        public $type = 'urbane-radio-image';
 
         public function render_content() {
             

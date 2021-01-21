@@ -28,7 +28,7 @@ $fields =  array(
 $custom_comment_form = array(
     'fields'                => apply_filters( 'urbane_comment_form_default_fields', $fields ),
     'comment_field'         => '<textarea name="comment" id="comment" class="textarea-form" placeholder="'.esc_attr__('Your comment ...', 'urbane').'"  rows="1"></textarea>',
-    'logged_in_as'          => '<p class="logged-in-as">' . esc_html__('Logged in as', 'urbane') .' <a href="'.admin_url('profile.php').'">'. $user_identity .'</a> <a href="'. wp_logout_url( apply_filters( 'urbane_the_permalink', get_permalink() ) ) .'">'. esc_html__('Log out?', 'urbane'). '</a></p>',
+    'logged_in_as'          => '<p class="logged-in-as">' . esc_html__('Logged in as', 'urbane') .' <a href="'.esc_url(admin_url('profile.php')).'">'. $user_identity .'</a> <a href="'. wp_logout_url( apply_filters( 'urbane_the_permalink', get_permalink() ) ) .'">'. esc_html__('Log out?', 'urbane'). '</a></p>',
     'cancel_reply_link'     => esc_html__( 'Cancel' , 'urbane' ),
     'comment_notes_before'  => '',
     'comment_notes_after'   => '',
