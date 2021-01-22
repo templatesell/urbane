@@ -30,6 +30,9 @@ Urbane includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.4 - January 22 2021 =
+* Fixed some minor css fixes
+
 = 1.0.3 - January 22 2021 =
 * Added upgrade to pro
 * Added about us page
