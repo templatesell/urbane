@@ -32,10 +32,8 @@ $image = absint($urbane_theme_options['urbane-single-page-featured-image']);
                 if ('post' === get_post_type()) :
                     ?>
                     <div class="entry-meta">
-                        <?php
-                        urbane_posted_on();
-                        urbane_posted_by();
-                        ?>
+                        <i class="fa fa-user-o"></i><?php  urbane_posted_by(); ?>
+                        <i class="fa fa-calendar-o"></i><?php urbane_posted_on(); ?>
                     </div><!-- .entry-meta -->
                 <?php endif; ?>
             </div>

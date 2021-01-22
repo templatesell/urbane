@@ -52,9 +52,12 @@ if (!function_exists('urbane_related_post')) :
                                     <?php
                                     if (has_post_thumbnail() ):
                                         ?>
+                                        <?php
+                                            $image_id = get_post_thumbnail_id();
+                                            $image_url = wp_get_attachment_image_src( $image_id,'',true );
+                                         ?>
                                         <figure class="post-media">
-                                            <a href="<?php the_permalink() ?>">
-                                                <?php the_post_thumbnail('urbane-related-post-thumbnails'); ?>
+                                            <a href="<?php the_permalink() ?>" class="post-image" style="background-image: url(<?php echo esc_url($image_url[0]);?>)">
                                             </a>
                                         </figure>
                                         <?php
@@ -64,7 +67,10 @@ if (!function_exists('urbane_related_post')) :
                                         <h2 class="post-title entry-title"><a
                                                     href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>                                      
                                             <div class="post-date">
-                                                <?php echo get_the_date(); ?>
+                                                <div class="entry-meta">
+                                                <i class="fa fa-user-o"></i><?php  urbane_posted_by(); ?>
+                                                <i class="fa fa-calendar-o"></i><?php urbane_posted_on(); ?>
+                                                </div>
                                             </div>
                                     </div>
                                 </div>

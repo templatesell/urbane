@@ -28,6 +28,8 @@ if (!function_exists('urbane_dynamic_css')) :
         if (!empty($urbane_primary_color)) {
             $custom_css .= "
             #toTop,
+            .more-link,
+            .pagination .page-numbers.current,
             a.effect:before,
             .show-more,
             a.link-format,
