@@ -1764,7 +1764,7 @@ nav#site-navigation {
         border: none;
     }
     .header-1 .bar-menu span{
-        background: #333;
+        background: #fff;
         height: 2px;
         margin: 6px 0;
         display: inherit;
@@ -1773,7 +1773,7 @@ nav#site-navigation {
     .header-1 .bar-menu:after {
         content: '';
         display: block;
-        background: #333;
+        background: #fff;
         height: 2px;
     }
     .header-1 .main-menu{
@@ -1784,7 +1784,7 @@ nav#site-navigation {
         text-align: left;
         background: #fff;
         z-index: 50;
-        margin-top: 10px;
+        margin-top: 6px;
     }
     .header-1 .header-image .head_one{
         border: 0;
@@ -4426,15 +4426,15 @@ input[type="radio"]:checked:before {
 .post-template-post-middle-column.single #primary{
     width: 100%;
 }
-
-.blog.middle-column .posts-container .container,
-.archive.middle-column .posts-container .container,
-.page.middle-column .posts-container .container,
-.single.single-middle-column .posts-container .container{
-    width: 60%;
-    margin :auto;
+@media (min-width: 992px){
+    .blog.middle-column .posts-container .container,
+    .archive.middle-column .posts-container .container,
+    .page.middle-column .posts-container .container,
+    .single.single-middle-column .posts-container .container{
+        width: 60%;
+        margin :auto;
+    }
 }
-
 /* Blog Layout Column options */
 .masonry-start{
     clear: both;
@@ -7547,6 +7547,67 @@ div#urbane-breadcrumbs {
     background-color: #333;
     color: #fff;
 }
+/**
+ * "instagram Mailchim
+ * -------------------------------------------------------------
+ */
+.instagram-section {
+    position: relative;
+        padding:70px 0;
+}
+
+div#sbi_load {
+    position: absolute;
+    top: calc(50% + -10px);
+}
+
+.mc4wp-form-fields {
+    position: relative;
+}
+.mc4wp-form-fields input[type="text"]:not([type='checkbox']),
+.mc4wp-form-fields input[type="email"]:not([type='checkbox']) {
+    width: 100%;
+    text-align: left;
+    border: 0;
+    border-bottom: 1px solid #6d7078;
+    background-color: transparent;
+    color: #dbdbdb;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.mc4wp-form-fields input[type="text"]:not([type='checkbox'])::-ms-input-placeholde,
+.mc4wp-form-fields input[type="email"]:not([type='checkbox'])::-ms-input-placeholder {
+    color: #dbdbdb;
+}
+.mc4wp-form-fields input[type="text"]:not([type='checkbox'])::placeholder,
+.mc4wp-form-fields input[type="email"]:not([type='checkbox'])::placeholder {
+    color: #dbdbdb;
+}
+
+.mc4wp-form-fields input[type="submit"] {
+    transition: all 400ms;
+    margin-bottom: 0;
+    padding: 0 34px;
+    height: 44px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    color: #fff !important;
+    letter-spacing: 0;
+    border:0;
+}
+
+.mc4wp-form-fields input[type="submit"]:hover,
+.mc4wp-form-fields input[type="submit"]:active,
+.mc4wp-form-fields input[type="submit"]:focus {
+    background: #1f2123 !important;
+}
+
 /*EXTRA CSS*/
 .pro-btn a:after {
     background: #00cf24;
