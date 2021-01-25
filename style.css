@@ -1685,9 +1685,9 @@ div#MobileMenu {
 .main-header.header-image .logo h1 a{
     color: #fff;
 }
-.header-image .mobile-menu:before,
-.header-image .mobile-menu:after,
-.header-image .mobile-menu span{
+.header-1 .header-image .bar-menu span,
+.header-1 .header-image .bar-menu:before,
+.header-1 .header-image .bar-menu:after {
     background: #fff;
 }
 @media (max-width: 991px) {
@@ -1764,7 +1764,7 @@ nav#site-navigation {
         border: none;
     }
     .header-1 .bar-menu span{
-        background: #fff;
+        background: #333;
         height: 2px;
         margin: 6px 0;
         display: inherit;
@@ -1773,7 +1773,7 @@ nav#site-navigation {
     .header-1 .bar-menu:after {
         content: '';
         display: block;
-        background: #fff;
+        background: #333;
         height: 2px;
     }
     .header-1 .main-menu{
@@ -7600,12 +7600,13 @@ div#sbi_load {
     color: #fff !important;
     letter-spacing: 0;
     border:0;
+    background: #333;
 }
 
 .mc4wp-form-fields input[type="submit"]:hover,
 .mc4wp-form-fields input[type="submit"]:active,
 .mc4wp-form-fields input[type="submit"]:focus {
-    background: #1f2123 !important;
+    background: #ec407a !important;
 }
 
 /*EXTRA CSS*/
