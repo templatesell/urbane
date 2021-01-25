@@ -30,6 +30,12 @@ Urbane includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.5 - January 23 2021 =
+* Fixed mailchimp form design
+* Fixed header image
+* Fixed releated post design
+* Fixed some minor css fixes
+
 = 1.0.4 - January 22 2021 =
 * Fixed some minor css fixes
 
