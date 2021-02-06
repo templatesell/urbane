@@ -63,7 +63,9 @@ $image = absint($urbane_theme_options['urbane-single-page-featured-image']);
             <footer class="post-footer entry-footer">
                 <div class="meta_bottom">
                     <div class="post-tags">
+                    <?php if(has_tag()) { ?> 
                         <i class="fa fa-tag"></i> <?php urbane_entry_tags_meta(); ?>
+                    <?php } ?>
                     </div>
                     <?php 
                     if( 1 == $social_share ){
