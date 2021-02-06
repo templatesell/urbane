@@ -33,6 +33,8 @@ if (!function_exists('urbane_dynamic_css')) :
             a.effect:before,
             .show-more,
             a.link-format,
+            .wpcf7-form-control.wpcf7-submit,
+            .comment-form #submit,
             .meta_bottom .post-share a:hover,
             .tabs-nav li:before,
             .post-slider-section .s-cat,
@@ -75,6 +77,7 @@ if (!function_exists('urbane_dynamic_css')) :
         if (!empty($urbane_primary_color)) {
             $custom_css .= "
             .post-cats > span i, 
+            .post-tags i,
             .post-cats > span a,
             .slide-wrap .caption span a:hover,
             .comment-form .logged-in-as a:last-child:hover, 
