@@ -6,8 +6,19 @@ if (!function_exists('urbane_breadcrumb_options')) :
     function urbane_breadcrumb_options()
     {
         global $urbane_theme_options;
-        if (1 == $urbane_theme_options['urbane-extra-breadcrumb']) {
+        $breadcrumbs = absint($urbane_theme_options['urbane-extra-breadcrumb']);
+        $breadcrumb_from = esc_attr($urbane_theme_options['urbane-breadcrumb-selection-option']);        
+
+        if ( $breadcrumbs == 1 && $breadcrumb_from == 'theme' ) {
             urbane_breadcrumbs();
+        }elseif($breadcrumbs == 1 &&  $breadcrumb_from == 'yoast' && (function_exists('yoast_breadcrumb'))){
+            yoast_breadcrumb();
+        }elseif($breadcrumbs == 1 && 'rankmath' == $breadcrumb_from && (function_exists('rank_math_the_breadcrumbs'))) {
+          rank_math_the_breadcrumbs();
+        }elseif($breadcrumbs == 1 && 'navxt' == $breadcrumb_from && (function_exists('bcn_display'))){
+            bcn_display();
+        }else{
+            //do nothing
         }
     }
 endif;

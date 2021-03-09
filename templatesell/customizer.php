@@ -72,6 +72,7 @@ if ( !function_exists('urbane_default_theme_options_values') ) :
 
             /*Breadcrumb Options*/
             'urbane-extra-breadcrumb' => 1,
+            'urbane-breadcrumb-selection-option'=> 'theme',
 
         );
 return apply_filters( 'urbane_default_theme_options_values', $default_theme_options );

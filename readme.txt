@@ -30,6 +30,10 @@ Urbane includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.8 - March 09 2021 =
+* Added compatibility for plugin breadcrumbs
+* Pro notice added 
+
 = 1.0.7 - February 06 2021 =
 * Fixed some minor css 
 
