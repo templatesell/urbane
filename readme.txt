@@ -30,6 +30,11 @@ Urbane includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.1.1 - February 24 2022 =
+* Tested with WordPress 5.9
+* Changed copyright date
+* Fixed widget screen
+
 = 1.1.0 - August 11 2021 =
 * Tested with WordPress 5.8
 * Disable new widget screen

@@ -91,5 +91,13 @@ h3{
     margin-bottom: 2.5rem;
     max-width: 70%;
 }
-
+.urbane-panel span{
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 2.5rem;
+    max-width: 70%;
+    align-items: flex-end;
+    margin-top: 10px;
+   font-style: italic;
+}
 

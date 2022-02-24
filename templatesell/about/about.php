@@ -44,7 +44,17 @@ function urbane_page() {
 				<div class="theme-title">
 					<h3><?php esc_html_e( 'Looking for theme Documentation?', 'urbane' ); ?></h3>
 				</div>
-				<a href="http://www.docs.templatesell.net/urbane" target="_blank" class="btn btn-secondary"><?php esc_html_e( 'Documentation - Click Here', 'urbane' ); ?></a>
+				<a href="http://docs.templatesell.net/urbane" target="_blank" class="btn btn-secondary"><?php esc_html_e( 'Documentation - Click Here', 'urbane' ); ?></a>
+			</div>
+		</div>
+		<div class="urbane-panel">
+			<div class="urbane-panel-content">
+				<div class="theme-title">
+					<h3><?php esc_html_e( 'Recommended plugin for SEO. Rank Math is the best plugin and we would like to recommend it.', 'urbane' ); ?></h3>
+				</div>
+				<a href="https://rankmath.com/?ref=templatesell" target="_blank" class="btn btn-secondary"><?php esc_html_e( 'Download Rank Math Plugin', 'urbane' ); ?></a>
+				<span>
+			<?php esc_html_e( 'Here we included an affiliate link to Rank Math Plugin. If you click on the link and buy the product, we’ll receive a small fee. No worries though, you’ll still pay the standard amount without any extra cost to you.', 'promos' ); ?></span><a href="https://www.templatesell.com/blog/template-sell-uses-rank-math/" target="_blank" class="about-link"><?php esc_html_e( 'Read why Template Sell recommend Rank Math', 'urbane' ); ?></a>
 			</div>
 		</div>
 		<div class="urbane-panel">

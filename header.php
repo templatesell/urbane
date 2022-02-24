@@ -8,7 +8,6 @@
  *
  * @package Urbane
  */
-$GLOBALS['urbane_theme_options'] = urbane_get_options_value();
 global $urbane_theme_options;
 $enable_slider = absint($urbane_theme_options['urbane_enable_slider']);
 $enable_box = $urbane_theme_options['urbane_enable_promo'];
@@ -53,7 +52,7 @@ if ( function_exists( 'wp_body_open' ) ) {
             ?>
         </section>
     <?php } ?>
-    <?php if ($enable_box == 1 && (is_home() || is_front_page() ) )  { ?>
+    <?php if ($enable_box == 1 && (is_home() || is_front_page()) )  { ?>
         <section class="promo-slider-wrapper">
             <?php
             

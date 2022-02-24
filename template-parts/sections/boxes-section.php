@@ -9,12 +9,9 @@
  */
 global $urbane_theme_options;
 $promo_cat = absint($urbane_theme_options['urbane-promo-select-category']);
+?>
 
-if( $promo_cat > 0 && is_home() )
-{ ?>
     <div class="urbane-promo-section">
-        <?php if ( is_front_page() && is_home() )
-        {  ?>
             <div class="container">
                 <div class="row promo-section promo-one">
                     <?php
@@ -79,6 +76,4 @@ if( $promo_cat > 0 && is_home() )
                         <?php endwhile; endif; wp_reset_postdata(); ?>
                 </div>
             </div>
-        <?php } ?>
     </div>
-<?php   }

@@ -68,7 +68,7 @@ if ( !function_exists('urbane_default_theme_options_values') ) :
             'urbane-enable-sticky-sidebar' => 0,
 
             /*Footer Section*/
-            'urbane-footer-copyright'  => esc_html__('Copyright All Rights Reserved 2021','urbane'),
+            'urbane-footer-copyright'  => esc_html__('Copyright All Rights Reserved 2022','urbane'),
 
             /*Breadcrumb Options*/
             'urbane-extra-breadcrumb' => 1,
