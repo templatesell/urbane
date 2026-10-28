@@ -20,11 +20,7 @@ $urbane_slick_args = array(
 	'arrows'         => false,
 );
 
-/*
- * Only posts that have a featured image, because a slide is the image: a
- * post without one used to be fetched, counted and then skipped, which could
- * leave an empty slider on the page.
- */
+// Only posts with a featured image.
 $urbane_slider_query = new WP_Query(
 	array(
 		'posts_per_page'      => 5,

@@ -8,17 +8,8 @@
 
 if ( ! function_exists( 'urbane_accent_selectors' ) ) :
 	/**
-	 * Every selector in style.css that is painted with the theme accent,
-	 * grouped by the property each rule needs.
-	 *
-	 * The customizer used to repaint fifty-one of the hundred and thirty-eight
-	 * places the stylesheet hard-codes the accent, so changing the Primary
-	 * Color left the post-format marks, the checkboxes and radio buttons, the
-	 * comment links, the file and newsletter buttons, the quote card and the
-	 * text widget's controls all pink. The list below is that stylesheet audit.
-	 *
-	 * A shorthand such as "border: 1px solid" is repainted through its colour
-	 * longhand, so only the colour changes and the width and style stay put.
+	 * Selectors in style.css painted with the theme accent, grouped by the
+	 * property each rule needs.
 	 *
 	 * @return array Property name => array of selectors.
 	 */
@@ -180,11 +171,7 @@ if ( ! function_exists( 'urbane_accent_selectors' ) ) :
 
 		);
 
-		/*
-		 * Painted from the customizer without being hard-coded in the
-		 * stylesheet: the menu and header states, and the comment fields, which
-		 * the stylesheet only gives an accent on hover.
-		 */
+		// Menu, header and comment field states.
 		$selectors['color'] = array_merge(
 			$selectors['color'],
 			array(
@@ -254,11 +241,7 @@ if ( ! function_exists( 'urbane_dynamic_css' ) ) :
 
 		$urbane_defaults = urbane_default_theme_options_values();
 
-		/*
-		 * esc_attr() will happily pass "red; }" through into a stylesheet.
-		 * sanitize_hex_color() returns null for anything that is not a hex
-		 * colour, and the theme default stands in for it.
-		 */
+		// Fall back to the default when the colour is not a valid hex value.
 		$urbane_primary_color = sanitize_hex_color( $urbane_theme_options['urbane_primary_color'] );
 
 		if ( null === $urbane_primary_color ) {
@@ -288,10 +271,7 @@ if ( ! function_exists( 'urbane_dynamic_css' ) ) :
 				);
 			}
 
-			/*
-			 * Keyboard focus is drawn in the accent, so it follows the
-			 * customizer rather than staying the colour the theme shipped with.
-			 */
+			// The keyboard focus ring follows the accent.
 			$custom_css .= sprintf(
 				'a:focus, button:focus, input:focus, select:focus, textarea:focus, [tabindex]:focus, a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible { outline-color: %1$s; }',
 				$urbane_primary_color

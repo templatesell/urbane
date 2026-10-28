@@ -33,40 +33,25 @@ Urbane includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 = 1.1.2 - August 22 2026 =
-
-Fixed
-* The featured slider was configured into a variable that was never encoded, so the slider was handed no settings at all and PHP 8 logged an undefined variable on every front page view
-* The slider asked for five posts and then silently skipped any without a featured image, which could leave an empty slider on the page; it now asks only for posts that have one
-* Block patterns were registered while the file was being included, which asked WordPress for a translation before it had loaded one - the "translation loading was triggered too early" notice logged on every page view since WordPress 6.7
-* The text domain was loaded without being told where the language files are
-* One string in the About page still carried another theme's text domain, so it could never be translated by a WordPress.org language pack
-* Four font families were named in the stylesheets and never loaded - the search field, pullquotes, the verse block, the calendar and the mobile menu all fell back to a browser default. In right-to-left languages that included the body text of the whole site
-* The right-to-left stylesheet set a different heading font from the left-to-right one
-* The block pattern styles were loaded in the admin only, so a pattern looked right while it was being written and wrong once it was published
-* The author widget's script was registered with true where a version belongs, so it was versioned "1" and printed in the head
-* The comment form built its two-up name and email layout from Bootstrap grid markup split across three field definitions, and called the website field "website" where WordPress calls it "url". Logged in, WordPress removed the two fields that opened the row and left the one that closed it, so the website field sat indented and narrower with no row around it and the stray closing tag ended the form early, dropping the submit button back to the browser default. The fields are standard WordPress markup now, which is what the theme's own comment-form styles were written for - they had never applied to anything
-* The comment fields had no labels, only placeholders, which vanish as soon as anything is typed
-* The comment fields turned off their focus outline and marked focus with the same border colour they use for hover, so a keyboard user could not tell one from the other
-* url, number and date inputs were left out of the base field rule, so the comment form website field rendered a point smaller and three pixels shorter than the name and email fields beside it
-* The right-to-left stylesheet, which replaces the main one rather than adding to it, carried no base rule for text inputs, textareas or selects at all - every field in the theme rendered as a browser default
-
-Performance
-* Fonts are served from the theme instead of being fetched from Google on every page view, which also stops the visitor's IP address being handed to a third party before they have agreed to anything
-* Prata was downloaded on every page view and never used by the left-to-right design; it now carries the serif elements in both directions
-* Removed three JavaScript files that were never served: two copies of iScroll, which nothing referenced, and a copy of imagesLoaded that WordPress's own registration always overrode
-* imagesLoaded and Masonry now come from WordPress, and only on the layouts that use them
-* Every stylesheet and script is versioned from the theme version instead of "20200412" or "4.5.0", so caches bust when they should
-* The scripts that call jQuery now declare it, instead of relying on the slider being enqueued first
-
-Editor
-* Added editor styles. The theme enqueued an empty file, and did so in a way that no longer reaches the content now that the editor is an iframe, so writing a post looked nothing like reading one
-* Added three block styles: Lead paragraph, Boxed and Plain
-* Added support for wide alignment
-
-Other
-* Declared support for a custom background, which the theme has advertised in its tags since it shipped without the option ever appearing in the customizer
-* Corrected the readme: the stable tag said 1.0.0, and the PHP requirement said 4.7, which is a WordPress version
-* Tested up to WordPress 7.1
+* Fixed: featured slider settings not passed to the script (PHP 8 undefined variable).
+* Fixed: slider skipped posts without a featured image.
+* Fixed: translation loaded too early for block patterns (WP 6.7).
+* Fixed: text domain loaded without the languages path.
+* Fixed: wrong text domain in the About page.
+* Fixed: font families used in the stylesheets but never loaded.
+* Fixed: RTL stylesheet used a different heading font and had no base field rules.
+* Fixed: block pattern styles only loaded in the admin.
+* Fixed: author widget script version.
+* Fixed: comment form markup, field labels and focus outline.
+* Fixed: url, number and date inputs missing from the base field styles.
+* Added: editor styles, three block styles and wide alignment.
+* Added: custom-background theme support.
+* Changed: fonts are hosted locally.
+* Changed: imagesLoaded and Masonry come from WordPress core.
+* Changed: assets use the theme version for cache busting.
+* Changed: scripts declare their jQuery dependency.
+* Removed: iScroll and the unused imagesLoaded copy.
+* Tested with WP 7.1
 
 = 1.1.1 - February 24 2022 =
 * Tested with WordPress 5.9

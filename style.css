@@ -302,11 +302,7 @@ th {
     padding: 7px 0;
     text-align: center;
 }
-/*
- * url, number and the date family were left out of this list, so any field
- * of those types - the comment form website field among them - rendered a
- * point smaller and a few pixels shorter than the fields beside it.
- */
+/* Base rule for every text-like field. */
 input[type="text"], input[type="email"],
 input[type="search"], input[type="password"],
 input[type="tel"], input[type="url"],
@@ -7685,14 +7681,7 @@ div#sbi_load {
 }
 
 
-/* ==========================================================================
-   Urbane 1.1.2 - the theme's own block styles
-   ==========================================================================
-
-   Registered in functions.php as "Lead paragraph", "Boxed" and "Plain", so the
-   editor offers them in the block sidebar. The same rules are mirrored in
-   css/editor-styles.css.
-   ========================================================================== */
+/* Block styles: Lead paragraph, Boxed, Plain. */
 
 .is-style-urbane-lead {
     font-size: 18px;
@@ -7721,15 +7710,7 @@ div#sbi_load {
 }
 
 
-/* ==========================================================================
-   Urbane 1.1.2 - real featured images, readable links, a visible focus ring
-   ==========================================================================
-
-   The card thumbnail used to be a CSS background on an empty link. It is a real
-   <img> now, so it carries its alt text, a srcset and lazy loading, and the
-   browser can find it while the page is still parsing. The link keeps the
-   aspect-ratio spacer that shaped the old background, and the image fills it.
-   ========================================================================== */
+/* Featured images as real <img> elements. */
 
 .related-posts .post-media a.post-image,
 .has-post-thumbnail .post-media a.post-image {
@@ -7747,17 +7728,7 @@ div#sbi_load {
     object-fit: cover;
 }
 
-/*
- * A link inside post content was the same colour as the text around it with no
- * underline, which leaves nothing at all to tell a reader it is a link. The
- * theme underlined only a link that was a direct child of a paragraph inside
- * .post-content, so a link in a list, a table, a heading or inside <strong>
- * got nothing - and on the blog and archive pages links were underlined on
- * hover only, so at rest they were invisible.
- *
- * The !important matches the one on the theme's own "a" rule, which would
- * otherwise win no matter how specific this selector is.
- */
+/* Underline links in post content, comments and text widgets. */
 .entry-content a,
 .comment-content a,
 .widget .textwidget a {
@@ -7774,11 +7745,7 @@ div#sbi_load {
     text-decoration: none !important;
 }
 
-/*
- * Keyboard focus was a 1px dotted grey outline, which is hard to see against a
- * white page and disappears entirely over an image. :focus-visible keeps it off
- * the mouse, and the plain :focus rule below it covers browsers without support.
- */
+/* Visible keyboard focus ring. */
 a:focus,
 button:focus,
 input:focus,
@@ -7821,19 +7788,7 @@ textarea:focus-visible,
 }
 
 
-/* ==========================================================================
-   Urbane 1.1.2 - comment form
-   ==========================================================================
-
-   comments.php used to build the two-up name/email layout out of Bootstrap
-   grid markup split across three separate field strings. That broke as soon as
-   a reader was logged in, and it meant the theme's own comment-form styles -
-   .comment-form-author, .comment-form-email, .comment-form-url and
-   .comment-form label, all present in this stylesheet since the theme shipped -
-   never applied to anything.
-
-   The fields are standard WordPress markup now and the layout is done here.
-   ========================================================================== */
+/* Comment form: standard WordPress markup, two-up name and email. */
 
 .comment-form {
     display: -webkit-box;
@@ -7863,10 +7818,7 @@ textarea:focus-visible,
     }
 }
 
-/*
- * One rhythm for the whole form. The wrapper carries the gap; the control does
- * not add a second one under it.
- */
+/* One spacing rhythm for the whole form. */
 .comment-form-comment,
 .comment-form-author,
 .comment-form-email,
@@ -7881,19 +7833,14 @@ textarea:focus-visible,
     margin-bottom: 0;
 }
 
-/* The textarea had 10px of padding where the text inputs have 12px and 18px. */
+/* Textarea padding matches the text inputs. */
 #comment {
     height: auto;
     min-height: 140px;
     padding: 12px 18px;
 }
 
-/*
- * The fields turned off their outline on focus and marked it with a border
- * colour instead - the same border colour they use for hover, so a keyboard
- * user could not tell focus from a passing mouse. The border still moves to
- * the accent; the ring comes back on top of it.
- */
+/* Focus ring on the comment fields. */
 #author:focus-visible,
 #email:focus-visible,
 #url:focus-visible,

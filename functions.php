@@ -8,9 +8,7 @@
  */
 
 /**
- * The theme version, used to bust the cache on every stylesheet and script
- * the theme enqueues. Most of them were versioned "20200412" or "4.5.0"
- * regardless of what had changed in them since.
+ * Theme version, used for asset cache busting.
  */
 if ( ! defined( 'URBANE_VERSION' ) ) {
 	define( 'URBANE_VERSION', '1.1.2' );
@@ -95,14 +93,10 @@ if ( ! function_exists( 'urbane_setup' ) ) :
 		// Add support for default block styles.
 		add_theme_support( 'wp-block-styles' );
 
-		// Let a wide or full-width block use the room the layout has for it.
+		// Wide and full-width blocks.
 		add_theme_support( 'align-wide' );
 
-		/*
-		 * The theme has advertised custom-background in its tags since it shipped
-		 * without ever declaring support for it, so the option never appeared in
-		 * the customizer.
-		 */
+		// Custom background support.
 		add_theme_support(
 			'custom-background',
 			array(
@@ -111,12 +105,7 @@ if ( ! function_exists( 'urbane_setup' ) ) :
 			)
 		);
 
-		/*
-		 * Editor styles. The theme enqueued css/editor-styles.css on
-		 * enqueue_block_editor_assets, but that file is empty and, since the post
-		 * editor became an iframe, styles added that way do not reach the content
-		 * anyway. add_editor_style() does, and it carries the theme's fonts in.
-		 */
+		// Editor styles, loaded into the editor iframe together with the theme fonts.
 		add_editor_style( array( 'assets/fonts/fonts.css', 'css/editor-styles.css' ) );
 
 		// Add support for Yoast SEO Breadcrumbs.
@@ -255,9 +244,7 @@ function urbane_widgets_init() {
 add_action( 'widgets_init', 'urbane_widgets_init' );
 
 /**
- * Register the theme's own block styles.
- *
- * Hooked to init, because a style label is a translated string.
+ * Register the theme's block styles on init.
  */
 function urbane_register_block_styles() {
 

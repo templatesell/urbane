@@ -26,11 +26,7 @@ if ( ! function_exists( 'urbane_posted_on' ) ) :
 	$posted_on = 
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
-		/*
-		 * A duplicate of urbane_posted_by() used to be built here and thrown
-		 * away, which also put a second "By %s" into the translation template
-		 * that differed from the one in use only by its first letter.
-		 */
+		// The byline is printed by urbane_posted_by().
 		echo '<span class="posted-on">' . $posted_on . '</span>';
 	}
 endif;

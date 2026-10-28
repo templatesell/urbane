@@ -1,11 +1,4 @@
-/*
- * Urbane editor styles.
- *
- * This file shipped empty, so writing a post looked nothing like reading one:
- * the editor used its own font, its own scale and its own colours. These rules
- * mirror the front end, and are loaded through add_editor_style() so they reach
- * the content inside the editor iframe.
- */
+/* Urbane editor styles, loaded through add_editor_style(). */
 
 .editor-styles-wrapper {
     font-family: 'Poppins', sans-serif;
@@ -65,11 +58,7 @@
     font-size: 15px;
 }
 
-/*
- * A link in post content is the same colour as the text on the front end, so
- * the editor shows it the same way it will be read - underlined, which is the
- * only thing telling a reader it is a link at all.
- */
+/* Links are underlined, as on the front end. */
 .editor-styles-wrapper a {
     color: #4c4f53;
     text-decoration: underline;

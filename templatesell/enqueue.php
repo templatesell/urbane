@@ -12,12 +12,7 @@ function urbane_scripts() {
 
 	global $urbane_theme_options;
 
-	/*
-	 * Poppins, Prata and Monsieur La Doulaise are served from the theme. They
-	 * used to be fetched from fonts.googleapis.com on every page view, which
-	 * hands the visitor's IP address to a third party before they have agreed
-	 * to anything, and adds two DNS lookups to the critical path.
-	 */
+	// Bundled fonts: Poppins, Prata and Monsieur La Doulaise.
 	wp_enqueue_style( 'urbane-fonts', get_template_directory_uri() . '/assets/fonts/fonts.css', array(), URBANE_VERSION );
 
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.7.0' );
@@ -42,11 +37,7 @@ function urbane_scripts() {
 		: '';
 
 	if ( 'masonry-post' === $urbane_layout || 'one-column' === $urbane_layout ) {
-		/*
-		 * masonry and imagesloaded both ship with WordPress. The theme carried
-		 * its own copy of imagesloaded, but a handle that core has already
-		 * registered keeps core's source, so that copy was never served.
-		 */
+		// masonry and imagesloaded ship with WordPress.
 		wp_enqueue_script( 'imagesloaded' );
 		wp_enqueue_script( 'masonry' );
 		wp_enqueue_script( 'urbane-custom-masonry', get_template_directory_uri() . '/assets/js/custom-masonry.js', array( 'jquery', 'masonry', 'imagesloaded' ), URBANE_VERSION, true );
@@ -56,10 +47,7 @@ function urbane_scripts() {
 
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.js', array( 'jquery' ), '1.8.0', true );
 
-	/*
-	 * Both of these call jQuery on the first line and neither declared it. They
-	 * only ran because slick happens to be enqueued ahead of them.
-	 */
+	// Theme scripts.
 	wp_enqueue_script( 'urbane-script', get_template_directory_uri() . '/assets/js/script.js', array( 'jquery' ), URBANE_VERSION, true );
 
 	wp_enqueue_script( 'urbane-custom', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery' ), URBANE_VERSION, true );
@@ -102,11 +90,6 @@ add_action( 'wp_enqueue_scripts', 'urbane_scripts' );
 
 /**
  * Enqueue the block pattern styles.
- *
- * The patterns are written with these classes, so the rules are needed wherever
- * the content is shown - the editor and the front end alike. They used to be
- * loaded in the admin only, which meant a pattern looked right while it was
- * being edited and wrong once it was published.
  */
 function urbane_block_assets() {
 	wp_enqueue_style( 'urbane-block-style', get_template_directory_uri() . '/templatesell/patterns/block-style.css', array(), URBANE_VERSION );
