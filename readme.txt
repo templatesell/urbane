@@ -1,11 +1,13 @@
 === Urbane ===
 
 Contributors: templatesell
+Theme URI: https://www.templatesell.com/item/urbane-masonry-wordpress-blog-theme/
+Author URI: https://www.templatesell.com/
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog, news
-Requires at least: 4.5
-Requires PHP: 4.7
-Tested up to: 5.6
-Stable tag: 1.0.0
+Requires at least: 6.0
+Requires PHP: 7.4
+Tested up to: 7.1
+Stable tag: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +32,42 @@ Urbane includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.1.2 - August 22 2026 =
+
+Fixed
+* The featured slider was configured into a variable that was never encoded, so the slider was handed no settings at all and PHP 8 logged an undefined variable on every front page view
+* The slider asked for five posts and then silently skipped any without a featured image, which could leave an empty slider on the page; it now asks only for posts that have one
+* Block patterns were registered while the file was being included, which asked WordPress for a translation before it had loaded one - the "translation loading was triggered too early" notice logged on every page view since WordPress 6.7
+* The text domain was loaded without being told where the language files are
+* One string in the About page still carried another theme's text domain, so it could never be translated by a WordPress.org language pack
+* Four font families were named in the stylesheets and never loaded - the search field, pullquotes, the verse block, the calendar and the mobile menu all fell back to a browser default. In right-to-left languages that included the body text of the whole site
+* The right-to-left stylesheet set a different heading font from the left-to-right one
+* The block pattern styles were loaded in the admin only, so a pattern looked right while it was being written and wrong once it was published
+* The author widget's script was registered with true where a version belongs, so it was versioned "1" and printed in the head
+* The comment form built its two-up name and email layout from Bootstrap grid markup split across three field definitions, and called the website field "website" where WordPress calls it "url". Logged in, WordPress removed the two fields that opened the row and left the one that closed it, so the website field sat indented and narrower with no row around it and the stray closing tag ended the form early, dropping the submit button back to the browser default. The fields are standard WordPress markup now, which is what the theme's own comment-form styles were written for - they had never applied to anything
+* The comment fields had no labels, only placeholders, which vanish as soon as anything is typed
+* The comment fields turned off their focus outline and marked focus with the same border colour they use for hover, so a keyboard user could not tell one from the other
+* url, number and date inputs were left out of the base field rule, so the comment form website field rendered a point smaller and three pixels shorter than the name and email fields beside it
+* The right-to-left stylesheet, which replaces the main one rather than adding to it, carried no base rule for text inputs, textareas or selects at all - every field in the theme rendered as a browser default
+
+Performance
+* Fonts are served from the theme instead of being fetched from Google on every page view, which also stops the visitor's IP address being handed to a third party before they have agreed to anything
+* Prata was downloaded on every page view and never used by the left-to-right design; it now carries the serif elements in both directions
+* Removed three JavaScript files that were never served: two copies of iScroll, which nothing referenced, and a copy of imagesLoaded that WordPress's own registration always overrode
+* imagesLoaded and Masonry now come from WordPress, and only on the layouts that use them
+* Every stylesheet and script is versioned from the theme version instead of "20200412" or "4.5.0", so caches bust when they should
+* The scripts that call jQuery now declare it, instead of relying on the slider being enqueued first
+
+Editor
+* Added editor styles. The theme enqueued an empty file, and did so in a way that no longer reaches the content now that the editor is an iframe, so writing a post looked nothing like reading one
+* Added three block styles: Lead paragraph, Boxed and Plain
+* Added support for wide alignment
+
+Other
+* Declared support for a custom background, which the theme has advertised in its tags since it shipped without the option ever appearing in the customizer
+* Corrected the readme: the stable tag said 1.0.0, and the PHP requirement said 4.7, which is a WordPress version
+* Tested up to WordPress 7.1
+
 = 1.1.1 - February 24 2022 =
 * Tested with WordPress 5.9
 * Changed copyright date
@@ -89,8 +127,10 @@ Urbane is distributed under the terms of the GNU GPL v2 or later.
 * BreadcrumbTrail, Copyright (c) 2008 - 2015, Justin Tadlock http://themehybrid.com/plugins/breadcrumb-trail
 * Theia Sticky Sidebar https://github.com/WeCodePixels/theia-sticky-sidebar [MIT license]
 * Slick Slider https://github.com/kenwheeler/slick/blob/master/LICENSE [The MIT License (MIT)]
-* Font-Awesome https://github.com/FortAwesome/Font-Awesome FontAwesome 4.6.3 Copyright 2012 Dave Gandy Font License: SIL OFL 1.1 Code License: MIT License http://fontawesome.io/license/
-* imagesLoaded MIT License https://imagesloaded.desandro.com/#mit-license
+* Font-Awesome https://github.com/FortAwesome/Font-Awesome FontAwesome 4.7.0 Copyright 2012 Dave Gandy Font License: SIL OFL 1.1 Code License: MIT License http://fontawesome.io/license/
+* Poppins, Copyright 2014 Indian Type Foundry, Jonny Pinhorn, License: SIL Open Font License 1.1, Source: https://fonts.google.com/specimen/Poppins
+* Prata, Copyright 2011 Cyreal, License: SIL Open Font License 1.1, Source: https://fonts.google.com/specimen/Prata
+* Monsieur La Doulaise, Copyright 2011 Sudtipos, License: SIL Open Font License 1.1, Source: https://fonts.google.com/specimen/Monsieur+La+Doulaise
 
 
 == Block Patters & Screenshot Images [CCO License] ==

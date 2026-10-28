@@ -4,12 +4,13 @@ Theme URI: https://www.templatesell.com/item/urbane-masonry-wordpress-blog-theme
 Author: templatesell
 Author URI: https://www.templatesell.com/
 Description: A perfect theme for blog and magazine site. It is a feminine theme. With masonry layout and multiple blog page layout, this theme is the awesome and minimal theme. This theme has search option, off-canvas sidebar, multiple sidebar options, footer options, featured slider, promo boxed, footer widgets and many more. Besides that, this theme comes with added custom widgets for author information, featured posts, social icons, etc. It comes with primary color option to change the whole site color with a single click. It is advertisement ready theme. Looking for SEO ready theme? Download Urbane and use it now. More Details: https://www.templatesell.com/item/urbane-masonry-wordpress-blog-theme/
-Version: 1.1.1
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: urbane
-Requires PHP: 5.2
-Tested up to: 5.9
+Requires at least: 6.0
+Requires PHP: 7.4
+Tested up to: 7.1
 Tags: custom-background, custom-header, one-column, two-columns, three-columns, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog, news
 
 This theme, like WordPress, is licensed under the GPL.
@@ -52,7 +53,7 @@ a:focus {
 
 }
 a:hover {
-    color: #ec407a;
+    color: #d81b60;
 }
 a:focus,
 button:focus{
@@ -242,7 +243,7 @@ blockquote:before {
     font-size: 120px;
     font-style: normal;
     line-height: 0.79;
-    color: #ec407a;
+    color: #d81b60;
 }
 blockquote footer:before,
 blockquote small:before,
@@ -301,9 +302,17 @@ th {
     padding: 7px 0;
     text-align: center;
 }
-input[type="text"], input[type="email"], 
+/*
+ * url, number and the date family were left out of this list, so any field
+ * of those types - the comment form website field among them - rendered a
+ * point smaller and a few pixels shorter than the fields beside it.
+ */
+input[type="text"], input[type="email"],
 input[type="search"], input[type="password"],
-input[type="tel"],textarea{
+input[type="tel"], input[type="url"],
+input[type="number"], input[type="date"],
+input[type="datetime-local"], input[type="month"],
+input[type="time"], input[type="week"], textarea {
     border: 1px solid #cccccc;
     background: transparent;
     padding: 12px 18px;
@@ -1134,7 +1143,7 @@ textarea{min-height: 150px;}
 
 .main-menu ul li.current-menu-item > a,
 .main-menu ul li:hover > a {
-    color: #ec407a;
+    color: #d81b60;
 }
 
 .main-menu ul ul li > a {
@@ -1468,7 +1477,7 @@ textarea{min-height: 150px;}
     Submenu
     ================================================ */
     .main-menu.submenu-top-border li > ul {
-        border-top: 3px solid #ec407a;
+        border-top: 3px solid #d81b60;
     }
     .main-menu.submenu-top-border li > ul ul {
         top: -30px;
@@ -1630,7 +1639,7 @@ div#MobileMenu {
     -moz-transition: 350ms;
     -o-transition: 350ms;
     transition: 350ms;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -1885,8 +1894,8 @@ section.slider-wrapper {
   font-size: 24px;
   height: 50px;
   width: 40px;
-  border: 1px solid #c7c8ca;
-  color: #c7c8ca;
+  border: 1px solid #767d86;
+  color: #767d86;
   text-align: center;
   line-height: 50px;
   transition: all .3s;
@@ -1900,8 +1909,8 @@ section.slider-wrapper {
     visibility: visible;
 }
 .main-slider .slick-arrow:hover{
-  border: 1px solid #c7c8ca;
-  color: #c7c8ca;
+  border: 1px solid #767d86;
+  color: #767d86;
 }
 .main-slider .slick-arrow.slick-next {
   right: 30px;
@@ -1930,7 +1939,7 @@ section.slider-wrapper {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background: #959698;
+  background: #767d86;
 }
 .align-items-center {
     -webkit-box-align: center;
@@ -1992,8 +2001,8 @@ section.slider-wrapper {
     background: rgba(0, 0, 0, 0.37);
 }
 .bottom-caption .slick-current .slider-items span{
-    background: #ec407a;
-    border: 2px solid #ec407a;
+    background: #d81b60;
+    border: 2px solid #d81b60;
 }
 .bottom-caption .slider-items a,
 .bottom-caption .slider-items h4 {
@@ -2067,7 +2076,7 @@ section.slider-wrapper {
     top: 15px;
     right: 15px;
     bottom: 15px;
-    border: 1px solid #ec407a;
+    border: 1px solid #d81b60;
     z-index: -1;
     opacity: 0.7;
 }
@@ -2172,7 +2181,7 @@ section.slider-wrapper {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background: #959698;
+  background: #767d86;
 }
 @media (max-width: 991px){
     .slide-wrap{
@@ -2462,7 +2471,7 @@ article.format-quote .post-content .post-format::after {
     width: 30px;
     line-height: 30px;
     height: 30px;
-    background: #ec407a;
+    background: #d81b60;
 }
 article.format-standard .post-content .post-format::after{
     content: "\f016"
@@ -2550,8 +2559,8 @@ article.format-status .post-content .post-format::after{
   font-size: 24px;
   height: 50px;
   width: 40px;
-  border: 1px solid #c7c8ca;
-  color: #c7c8ca;
+  border: 1px solid #767d86;
+  color: #767d86;
   text-align: center;
   line-height: 50px;
   transition: all .3s;
@@ -2559,8 +2568,8 @@ article.format-status .post-content .post-format::after{
   z-index: 99;
 }
 .blog-gallery .slick-arrow:hover{
-  border: 1px solid #c7c8ca;
-  color: #c7c8ca;
+  border: 1px solid #767d86;
+  color: #767d86;
 }
 .blog-gallery .slick-arrow.slick-next {
   right: 30px;
@@ -2589,7 +2598,7 @@ article.format-status .post-content .post-format::after{
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background: #959698;
+  background: #767d86;
 }
 
 /***
@@ -2670,14 +2679,14 @@ object {
     font-size: 13px;
     font-style: normal;
     text-transform: capitalize;
-    color: #989ea6
+    color: #6c737b
 }
 .post-date a {
-    color: #989ea6;
+    color: #6c737b;
 }
 .post-date a:focus,
 .post-date a:hover {
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline !important;
 }
 .post-date .entry-meta span{
@@ -2724,7 +2733,7 @@ object {
 .post-excerpt a:focus,
 .content a:hover,
 .content a:focus {
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline !important;
 }
 .content p {
@@ -2768,7 +2777,7 @@ object {
     padding: 5px 15px;
     font-size: 12px;
     text-align: center;
-    background-color: #ec407a;
+    background-color: #d81b60;
     font-weight: 500;
     color: #fff!important;
     letter-spacing: 2px;
@@ -2855,7 +2864,7 @@ a.effect:active {
 .post-cats{
     display: block;
     font-size: 14px;
-    color: #989ea6;
+    color: #6c737b;
 }
 .post-cats > span{
     padding-left: 10px;
@@ -2869,7 +2878,7 @@ a.effect:active {
 .post-cats > span i,
 .post-cats > span a,
 .post-tags > span a {
-    color: #ec407a;
+    color: #d81b60;
     font-size: 12px;
     font-weight: 500;
     padding-right: 5px;
@@ -2906,7 +2915,7 @@ a.effect:active {
     display: none;
 }
 .post-tags i {
-    color: #ec407a;
+    color: #d81b60;
     margin-right: 10px;
     font-size: 13px;
 }
@@ -2995,7 +3004,7 @@ a.effect:active {
 }
 a.link-format {
     padding: 43px 20px;
-    background: #ec407a;
+    background: #d81b60;
     margin: 0px -15px;
     color: #fff;
     font-size: 20px;
@@ -3006,7 +3015,7 @@ a.link-format:hover {
 }
 /* post format: Quote */
 .format-quote .post-wrap{
-    background: #ec407a;
+    background: #d81b60;
 }
 .format-quote .content{
     color: #fff;
@@ -3071,7 +3080,7 @@ a.link-format:hover {
     color: #fff;
 }
 .pagination a.page-numbers:hover {
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline !important;
 }
 
@@ -3117,7 +3126,7 @@ a.link-format:hover {
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #989ea6;
+    color: #6c737b;
     display: block;
     padding-left: 10px;
     top: 0;
@@ -3126,7 +3135,7 @@ a.link-format:hover {
     position: absolute;
     content: "\f0d9";
     font-family: "FontAwesome";
-    color: #989ea6;
+    color: #6c737b;
     left: 0;
     top: -3px;
 }
@@ -3136,7 +3145,7 @@ a.link-format:hover {
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #989ea6;
+    color: #6c737b;
     display: block;
     padding-right: 10px;
     top: 0;
@@ -3146,7 +3155,7 @@ a.link-format:hover {
     position: absolute;
     content: "\f0da";
     font-family: "FontAwesome";
-    color: #989ea6;
+    color: #6c737b;
     right: 0;
     top: -3px;
 }
@@ -3163,7 +3172,7 @@ a.link-format:hover {
 }
 .posts-navigation .nav-links a:hover,
 .posts-navigation .nav-links a:focus {
-    color: #ec407a; /* .post-title-nav color */
+    color: #d81b60; /* .post-title-nav color */
 }
 .show-more {
     position: relative;
@@ -3186,7 +3195,7 @@ a.link-format:hover {
     max-width: 100%;
     letter-spacing: .05em;
     padding: 1rem 4rem;
-    background: #ec407a;
+    background: #d81b60;
     color: #fff;
     margin: auto;
     margin-bottom: 40px;
@@ -3250,7 +3259,7 @@ a.link-format:hover {
     position: absolute;
     content: "\f0d9";
     font-family: "FontAwesome";
-    color: #989ea6;
+    color: #6c737b;
     left: 0;
 }
 
@@ -3258,7 +3267,7 @@ a.link-format:hover {
     position: absolute;
     content: "\f0da";
     font-family: "FontAwesome";
-    color: #989ea6;
+    color: #6c737b;
     right: 0;
 }
 .post-navigation .nav-links a {
@@ -3274,7 +3283,7 @@ a.link-format:hover {
 }
 .post-navigation .nav-links a:hover,
 .post-navigation .nav-links a:focus {
-    color: #ec407a; /* .post-title-nav color */
+    color: #d81b60; /* .post-title-nav color */
 }
 
 
@@ -3462,12 +3471,12 @@ input[type="radio"] {
 input[type="checkbox"]:hover, 
 input[type="checkbox"]:focus, 
 input[type="radio"]:hover {
-    border-color: #ec407a;
+    border-color: #d81b60;
 }
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-    background: #ec407a;
-    border-color: #ec407a;
+    background: #d81b60;
+    border-color: #d81b60;
 }
 input[type="checkbox"]:checked:before {
     content: "\2714";
@@ -3544,14 +3553,14 @@ input[type="radio"]:checked:before {
 }
 .about-author-name a:hover,
 .about-author-name a:focus {
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline !important;
 }
 .about-author-name .about-author-posts-num {
     display: block;
     margin-top: 5px;
     font-size: 12px;
-    color: #989ea6;
+    color: #6c737b;
 }
 .about-author-name .about-author-posts-num i {
     margin-right: 8px;
@@ -3572,14 +3581,14 @@ input[type="radio"]:checked:before {
     font-style: normal;
     font-weight: 600;
     line-height: 1.3;
-    color: #989ea6;
+    color: #6c737b;
 }
 .about-author-posts-link i {
     margin-right: 8px;
 }
 .about-author-posts-link:hover,
 .about-author-posts-link:focus {
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline !important;
 }
 .author-socials {
@@ -3691,7 +3700,7 @@ input[type="radio"]:checked:before {
 #email:hover,
 #url:hover,
 #comment:hover {
-    border-color: #ec407a;
+    border-color: #d81b60;
 }
 #author:active,
 #email:active,
@@ -3702,7 +3711,7 @@ input[type="radio"]:checked:before {
 #url:focus,
 #comment:focus {
     outline: none;
-    border-color: #ec407a;
+    border-color: #d81b60;
 }
 
 /* allowed tags */
@@ -3718,7 +3727,7 @@ input[type="radio"]:checked:before {
 .comment-form #submit {
     text-align: center;
     padding: 13px 25px;
-    background-color: #ec407a;
+    background-color: #d81b60;
     font-weight: 500;
     color: #fff;
     display: inline-block;
@@ -3758,7 +3767,7 @@ input[type="radio"]:checked:before {
 }
 .comment-respond .must-log-in a:hover,
 .comment-respond .must-log-in a:focus {
-    color: #ec407a;
+    color: #d81b60;
 }
 
 /* "logged-in as ..." message */
@@ -3775,7 +3784,7 @@ input[type="radio"]:checked:before {
 }
 .comment-form .logged-in-as a:last-child:hover,
 .comment-form .logged-in-as a:last-child:focus {
-    color: #ec407a;
+    color: #d81b60;
 }
 
 /* cancel comment reply link */
@@ -3787,7 +3796,7 @@ input[type="radio"]:checked:before {
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    color: #989ea6;
+    color: #6c737b;
 }
 .comment-reply-title #cancel-comment-reply-link:before {
     font-family: 'FontAwesome';
@@ -3796,7 +3805,7 @@ input[type="radio"]:checked:before {
     margin-right: 8px;
 }
 .comment-reply-title #cancel-comment-reply-link:hover {
-    color: #ec407a;
+    color: #d81b60;
 }
 
 
@@ -3847,7 +3856,7 @@ input[type="radio"]:checked:before {
     font-style: normal;
     font-weight: 600;
     line-height: 1.3;
-    color: #989ea6;
+    color: #6c737b;
 }
 .comment-list .pingback .comment-body:before {
     display: inline-block;
@@ -3875,7 +3884,7 @@ input[type="radio"]:checked:before {
 .comment-list .pingback .comment-body > a {
     display: block;
     margin-top: 12px;
-    font-family: 'Lora', serif;
+    font-family: 'Prata', Georgia, serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 1.7;
@@ -3883,7 +3892,7 @@ input[type="radio"]:checked:before {
 }
 .comment-list .pingback .comment-body > a:hover,
 .comment-list .pingback .comment-body > a:focus {
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline !important;
 }
 .comment-list .pingback .comment-body .edit-link {
@@ -3895,12 +3904,12 @@ input[type="radio"]:checked:before {
     line-height: 1.3;
 }
 .comment-list .pingback .comment-body .edit-link .comment-edit-link {
-    color: #989ea6;
+    color: #6c737b;
     text-decoration: none !important;
 }
 .comment-list .pingback .comment-body .edit-link .comment-edit-link:hover,
 .comment-list .pingback .comment-body .edit-link .comment-edit-link:focus {
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline !important;
 }
 
@@ -3929,7 +3938,7 @@ input[type="radio"]:checked:before {
 }
 .comment-meta .comment-author .fn .url:hover,
 .comment-meta .comment-author .fn .url:focus {
-    color: #ec407a;
+    color: #d81b60;
 }
 .comment-meta .comment-author .says {
     clip: rect(1px, 1px, 1px, 1px);
@@ -3956,14 +3965,14 @@ input[type="radio"]:checked:before {
     font-style: normal;
     font-weight: 600;
     line-height: 1.3;
-    color: #989ea6;
+    color: #6c737b;
 }
 .comment-meta .comment-metadata a {
-    color: #989ea6;
+    color: #6c737b;
 }
 .comment-meta .comment-metadata a:hover,
 .comment-meta .comment-metadata a:focus {
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline !important;
 }
 
@@ -3996,7 +4005,7 @@ input[type="radio"]:checked:before {
 }
 .comment-content a:hover,
 .comment-content a:focus {
-    color: #ec407a;
+    color: #d81b60;
 }
 
 /* comment reply */
@@ -4012,13 +4021,13 @@ input[type="radio"]:checked:before {
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    color: #989ea6;
+    color: #6c737b;
 }
 .comment-body .reply .comment-reply-link:focus {
-    color: #989ea6;
+    color: #6c737b;
 }
 .comment-body .reply .comment-reply-link:hover {
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline !important;
 }
 
@@ -4099,11 +4108,11 @@ input[type="radio"]:checked:before {
     font-weight: 600;
     text-transform: uppercase;
     word-wrap: break-word;
-    color: #989ea6;
+    color: #6c737b;
 }
 .comment-navigation .nav-links a:hover,
 .comment-navigation .nav-links a:focus {
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline !important;
 }
 .comment-navigation .nav-previous i {
@@ -4196,7 +4205,7 @@ input[type="radio"]:checked:before {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background: #959698;
+  background: #767d86;
 }
 
 
@@ -4274,7 +4283,7 @@ input[type="radio"]:checked:before {
 }
 .page-404-content a:hover,
 .page-404-content a:focus {
-    color: #ec407a;
+    color: #d81b60;
 }
 .search-no-results .search-form label,
 .page-404-content .search-form label {
@@ -4509,7 +4518,7 @@ article{
 }
 .widget a:hover,
 .widget a:focus {
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline !important;
 }
 
@@ -4531,7 +4540,7 @@ article{
 }
 .widget .widget-title a:hover,
 .widget .widget-title a:focus {
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline !important;
 }
 
@@ -4595,7 +4604,7 @@ article{
     padding: 0;
 }
 .widget_archive ul li {
-    color: #989ea6; /* counter */
+    color: #6c737b; /* counter */
     margin-bottom: 10px;
 }
 .widget_archive ul li:last-child {
@@ -4630,7 +4639,7 @@ article{
     padding: 0;
 }
 .widget_pages ul li {
-    color: #989ea6;
+    color: #6c737b;
     margin-bottom: 10px;
 }
 .widget_pages ul li:last-child {
@@ -4657,7 +4666,7 @@ article{
     padding: 0;
 }
 .widget_categories ul li {
-   color: #989ea6;
+   color: #6c737b;
     margin-bottom: 10px;
     display: block;
     text-align: left;
@@ -4714,7 +4723,7 @@ article{
 .widget_recent_entries ul li .post-date {
     display: block;
     font-size: 80%;
-    color: #989ea6;
+    color: #6c737b;
 }
 .widget_recent_entries li a {
     text-decoration: underline !important;
@@ -4931,7 +4940,7 @@ article{
 .textwidget input[type="reset"]:hover,
 .textwidget input[type="submit"]:hover {
     color: #ffffff;
-    background: #ec407a;
+    background: #d81b60;
 }
 .textwidget button:active,
 .textwidget input[type="button"]:active,
@@ -4997,7 +5006,7 @@ article{
 .textwidget input[type="date"]:hover,
 .textwidget textarea:hover,
 .textwidget select:hover {
-    border-bottom-color: #ec407a;
+    border-bottom-color: #d81b60;
 }
 .textwidget input[type="text"]:focus,
 .textwidget input[type="email"]:focus,
@@ -5011,7 +5020,7 @@ article{
 .textwidget select:active,
 .textwidget select:focus {
     outline: none;
-    border-bottom-color: #ec407a;
+    border-bottom-color: #d81b60;
 }
 .textwidget input[type="file"] {
     width: 100%;
@@ -5025,11 +5034,11 @@ article{
     transition: border-color 0.2s ease;
 }
 .textwidget input[type="file"]:hover {
-    border-color: #ec407a;
+    border-color: #d81b60;
 }
 .textwidget input[type="file"]:focus {
     outline: none;
-    border-color: #ec407a;
+    border-color: #d81b60;
 }
 .textwidget input[type="checkbox"],
 .textwidget input[type="radio"] {
@@ -5152,7 +5161,7 @@ article{
 
 /* search form */
 .widget_search #searchform .search-field {
-    font-family: 'Lora', serif;
+    font-family: 'Prata', Georgia, serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -5190,7 +5199,7 @@ article{
     border-bottom: 2px solid #e3e5e6;
 }
 .widget_search #searchform .search-submit:hover {
-    color: #ec407a;
+    color: #d81b60;
 }
 
 
@@ -5228,7 +5237,7 @@ article{
 .widget_rss ul li .rss-date {
     display: block;
     font-size: 80%;
-    color: #989ea6;
+    color: #6c737b;
 }
 .widget_rss ul li .rssSummary {
     margin-bottom: 2px;
@@ -5240,7 +5249,7 @@ article{
     text-align: left;
     font-style: normal;
     font-size: 80%;
-    color: #989ea6;
+    color: #6c737b;
 }
 
 /**
@@ -5501,7 +5510,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
     line-height: normal;
     padding: 4px 12px;
     position: relative;
-    background: #ec407a;
+    background: #d81b60;
 }
 .post-slider-section .s-cat:hover{
     color: #ffffff!important;
@@ -5560,7 +5569,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background: #959698;
+  background: #767d86;
 }
 
 
@@ -5877,7 +5886,7 @@ div[class*="footer-col-"]:last-child {
 }
 .site-footer a:hover,
 .site-footer a:focus {
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline !important;
 }
 
@@ -5898,7 +5907,7 @@ div[class*="footer-col-"]:last-child {
 }
 .footer-social-links a:hover,
 .footer-social-links a:focus {
-    color: #ec407a;
+    color: #d81b60;
 }
 
 /* footer menu */
@@ -5922,7 +5931,7 @@ div[class*="footer-col-"]:last-child {
 }
 .footer-menu li a:hover,
 .footer-menu li a:focus {
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline !important;
 }
 .footer-menu li ul {
@@ -5949,7 +5958,7 @@ div[class*="footer-col-"]:last-child {
     font-family: sans-serif;
     font-size: 16px;
     color: #ffffff;
-    background-color: #ec407a;
+    background-color: #d81b60;
     border-radius: 50%;
     box-shadow: 0 14px 28px -4px rgba(14,17,20,0.15);
     -webkit-transition: all 0.2s ease;
@@ -6014,7 +6023,7 @@ ul.trail-items li [rel~=home] span:before {
     font-family: Fontawesome;
 }
 ul.trail-items li a:hover span{
-    color: #ec407a;
+    color: #d81b60;
 }
 .breadcrumbs .delim {
     padding: 0 10px;
@@ -6248,7 +6257,7 @@ div#urbane-breadcrumbs {
     text-transform: uppercase;
 }
 .promo-three .post-category a{
-    color: #ec407a;
+    color: #d81b60;
     font-size: 14px;
     padding-right: 5px;
     margin-bottom: 5px;
@@ -6281,7 +6290,7 @@ div#urbane-breadcrumbs {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background: #959698;
+    background: #767d86;
 }
 /*==============================================================
 ##WordPress content styles: Gutenberg editor
@@ -6362,7 +6371,7 @@ div#urbane-breadcrumbs {
 .post-excerpt .wp-block-pullquote blockquote {
     margin: 0;
     padding: 0;
-    font-family: 'Lora', serif;
+    font-family: 'Prata', Georgia, serif;
     font-size: 18px !important;
     font-style: normal;
     line-height: 1.65 !important;
@@ -6666,12 +6675,12 @@ div#urbane-breadcrumbs {
     font-size: 15px;
     font-weight: 700;
     line-height: 1.7;
-    color: #ec407a;
+    color: #d81b60;
     text-decoration: underline;
 }
 .post-excerpt .wp-block-file a:not(.wp-block-file__button):focus,
 .post-excerpt .wp-block-file a:not(.wp-block-file__button):hover {
-    color: #ec407a;
+    color: #d81b60;
 }
 .post-excerpt .wp-block-file .wp-block-file__button {
     display: inline-block;
@@ -6695,7 +6704,7 @@ div#urbane-breadcrumbs {
 .post-excerpt .wp-block-file .wp-block-file__button:visited {
     box-shadow: none;
     color: #ffffff;
-    background: #ec407a;
+    background: #d81b60;
     opacity: 1;
 }
 
@@ -6750,7 +6759,7 @@ div#urbane-breadcrumbs {
     white-space: pre-wrap;
     overflow: auto;
     padding: 20px 30px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Prata', Georgia, serif;
     font-size: 17px;
     line-height: 1.7;
     background-color: transparent;
@@ -6821,7 +6830,7 @@ div#urbane-breadcrumbs {
     display: block;
     font-size: 12px;
     line-height: 1.7;
-    color: #989ea6;
+    color: #6c737b;
 }
 .post-excerpt .wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p {
     padding: 0;
@@ -6861,7 +6870,7 @@ div#urbane-breadcrumbs {
     display: block;
     font-size: 12px;
     line-height: 1.7;
-    color: #989ea6;
+    color: #6c737b;
 }
 .post-excerpt .wp-block-latest-posts.is-grid {
     list-style: none;
@@ -6884,7 +6893,7 @@ div#urbane-breadcrumbs {
 .post-excerpt .wp-block-calendar #wp-calendar {
     display: table;
     text-align: center;
-    font-family: 'Lora', serif;
+    font-family: 'Prata', Georgia, serif;
     line-height: 1.7;
 }
 .post-excerpt .wp-block-calendar table caption,
@@ -6913,7 +6922,7 @@ div#urbane-breadcrumbs {
 }
 .post-excerpt .wp-block-calendar #wp-calendar tfoot td a:hover,
 .post-excerpt .wp-block-calendar #wp-calendar tfoot td a:focus {
-    color: #ec407a;
+    color: #d81b60;
 }
 
 /* widget: rss */
@@ -6931,7 +6940,7 @@ div#urbane-breadcrumbs {
     display: block;
     font-size: 12px;
     line-height: 1.7;
-    color: #989ea6;
+    color: #6c737b;
 }
 .post-excerpt .wp-block-rss .wp-block-rss__item-excerpt {
     font-size: 14px;
@@ -6969,22 +6978,22 @@ div#urbane-breadcrumbs {
 /* search form: placeholder */
 /* Chrome/Opera/Safari */
 .post-excerpt .wp-block-search .wp-block-search__input::-webkit-input-placeholder {
-    color: #989ea6;
+    color: #6c737b;
     opacity: 1;
 }
 /* Firefox 18- */
 .post-excerpt .wp-block-search .wp-block-search__input:-moz-placeholder {
-    color: #989ea6;
+    color: #6c737b;
     opacity: 1;
 }
 /* Firefox 19+ */
 .post-excerpt .wp-block-search .wp-block-search__input::-moz-placeholder {
-    color: #989ea6;
+    color: #6c737b;
     opacity: 1;
 }
 /* IE 10+ */
 .post-excerpt .wp-block-search .wp-block-search__input:-ms-input-placeholder {
-    color: #989ea6;
+    color: #6c737b;
     opacity: 1;
 }
 
@@ -7082,7 +7091,7 @@ div#urbane-breadcrumbs {
     color: #fff;
     font-size: 12px;
     text-transform: uppercase;
-    background: #ec407a;
+    background: #d81b60;
     border-radius: 50%;
     left: 10px;
     top: 5px;
@@ -7529,7 +7538,7 @@ div#urbane-breadcrumbs {
 .wpcf7-form-control.wpcf7-submit{
     text-align: center;
     padding: 13px 25px;
-    background-color: #ec407a;
+    background-color: #d81b60;
     font-weight: 500;
     color: #fff;
     display: inline-block;
@@ -7606,7 +7615,7 @@ div#sbi_load {
 .mc4wp-form-fields input[type="submit"]:hover,
 .mc4wp-form-fields input[type="submit"]:active,
 .mc4wp-form-fields input[type="submit"]:focus {
-    background: #ec407a !important;
+    background: #d81b60 !important;
 }
 
 /*EXTRA CSS*/
@@ -7675,4 +7684,229 @@ div#sbi_load {
     font-family: sans-serif;
 }
 
+
+/* ==========================================================================
+   Urbane 1.1.2 - the theme's own block styles
+   ==========================================================================
+
+   Registered in functions.php as "Lead paragraph", "Boxed" and "Plain", so the
+   editor offers them in the block sidebar. The same rules are mirrored in
+   css/editor-styles.css.
+   ========================================================================== */
+
+.is-style-urbane-lead {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #2f3235;
+}
+
+.is-style-urbane-boxed {
+    padding: 30px;
+    background-color: #f7f8f8;
+    border: 1px solid #e3e5e6;
+}
+
+.is-style-urbane-plain-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.is-style-urbane-plain-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e3e5e6;
+}
+
+.is-style-urbane-plain-list li:last-child {
+    border-bottom: 0;
+}
+
+
+/* ==========================================================================
+   Urbane 1.1.2 - real featured images, readable links, a visible focus ring
+   ==========================================================================
+
+   The card thumbnail used to be a CSS background on an empty link. It is a real
+   <img> now, so it carries its alt text, a srcset and lazy loading, and the
+   browser can find it while the page is still parsing. The link keeps the
+   aspect-ratio spacer that shaped the old background, and the image fills it.
+   ========================================================================== */
+
+.related-posts .post-media a.post-image,
+.has-post-thumbnail .post-media a.post-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.post-media a.post-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/*
+ * A link inside post content was the same colour as the text around it with no
+ * underline, which leaves nothing at all to tell a reader it is a link. The
+ * theme underlined only a link that was a direct child of a paragraph inside
+ * .post-content, so a link in a list, a table, a heading or inside <strong>
+ * got nothing - and on the blog and archive pages links were underlined on
+ * hover only, so at rest they were invisible.
+ *
+ * The !important matches the one on the theme's own "a" rule, which would
+ * otherwise win no matter how specific this selector is.
+ */
+.entry-content a,
+.comment-content a,
+.widget .textwidget a {
+    text-decoration: underline !important;
+}
+
+/* Except the ones that are already drawn as buttons or as an image. */
+.entry-content a.post-image,
+.entry-content a.more-link,
+.entry-content .wp-block-button__link,
+.entry-content .wp-block-file__button,
+.comment-content a.comment-reply-link,
+.widget .textwidget a.wp-block-button__link {
+    text-decoration: none !important;
+}
+
+/*
+ * Keyboard focus was a 1px dotted grey outline, which is hard to see against a
+ * white page and disappears entirely over an image. :focus-visible keeps it off
+ * the mouse, and the plain :focus rule below it covers browsers without support.
+ */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[tabindex]:focus {
+    outline: 2px solid #d81b60;
+    outline-offset: 2px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+select:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+[tabindex]:focus:not(:focus-visible) {
+    outline: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid #d81b60;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* ==========================================================================
+   Urbane 1.1.2 - comment form
+   ==========================================================================
+
+   comments.php used to build the two-up name/email layout out of Bootstrap
+   grid markup split across three separate field strings. That broke as soon as
+   a reader was logged in, and it meant the theme's own comment-form styles -
+   .comment-form-author, .comment-form-email, .comment-form-url and
+   .comment-form label, all present in this stylesheet since the theme shipped -
+   never applied to anything.
+
+   The fields are standard WordPress markup now and the layout is done here.
+   ========================================================================== */
+
+.comment-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.comment-form > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    min-width: 0;
+}
+
+@media (min-width: 576px) {
+
+    .comment-form-author,
+    .comment-form-email {
+        -ms-flex: 0 1 calc(50% - 10px);
+        flex: 0 1 calc(50% - 10px);
+    }
+
+    .comment-form-author {
+        margin-right: 20px;
+    }
+}
+
+/*
+ * One rhythm for the whole form. The wrapper carries the gap; the control does
+ * not add a second one under it.
+ */
+.comment-form-comment,
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+    margin-bottom: 20px;
+}
+
+#author,
+#email,
+#url,
+#comment {
+    margin-bottom: 0;
+}
+
+/* The textarea had 10px of padding where the text inputs have 12px and 18px. */
+#comment {
+    height: auto;
+    min-height: 140px;
+    padding: 12px 18px;
+}
+
+/*
+ * The fields turned off their outline on focus and marked it with a border
+ * colour instead - the same border colour they use for hover, so a keyboard
+ * user could not tell focus from a passing mouse. The border still moves to
+ * the accent; the ring comes back on top of it.
+ */
+#author:focus-visible,
+#email:focus-visible,
+#url:focus-visible,
+#comment:focus-visible {
+    outline: 2px solid #d81b60;
+    outline-offset: 2px;
+}
+
+.comment-form .required {
+    color: #d81b60;
+}
+
+.comment-form .form-submit {
+    margin-bottom: 0;
+}
 

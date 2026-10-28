@@ -7,6 +7,15 @@
  * @package Urbane
  */
 
+/**
+ * The theme version, used to bust the cache on every stylesheet and script
+ * the theme enqueues. Most of them were versioned "20200412" or "4.5.0"
+ * regardless of what had changed in them since.
+ */
+if ( ! defined( 'URBANE_VERSION' ) ) {
+	define( 'URBANE_VERSION', '1.1.2' );
+}
+
 if ( ! function_exists( 'urbane_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -25,7 +34,7 @@ if ( ! function_exists( 'urbane_setup' ) ) :
 		 * If you're building a theme based on Urbane, use a find and replace
 		 * to change 'urbane' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'urbane' );
+		load_theme_textdomain( 'urbane', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -44,7 +53,7 @@ if ( ! function_exists( 'urbane_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		
+
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -85,6 +94,30 @@ if ( ! function_exists( 'urbane_setup' ) ) :
 
 		// Add support for default block styles.
 		add_theme_support( 'wp-block-styles' );
+
+		// Let a wide or full-width block use the room the layout has for it.
+		add_theme_support( 'align-wide' );
+
+		/*
+		 * The theme has advertised custom-background in its tags since it shipped
+		 * without ever declaring support for it, so the option never appeared in
+		 * the customizer.
+		 */
+		add_theme_support(
+			'custom-background',
+			array(
+				'default-color' => 'ffffff',
+				'default-image' => '',
+			)
+		);
+
+		/*
+		 * Editor styles. The theme enqueued css/editor-styles.css on
+		 * enqueue_block_editor_assets, but that file is empty and, since the post
+		 * editor became an iframe, styles added that way do not reach the content
+		 * anyway. add_editor_style() does, and it carries the theme's fonts in.
+		 */
+		add_editor_style( array( 'assets/fonts/fonts.css', 'css/editor-styles.css' ) );
 
 		// Add support for Yoast SEO Breadcrumbs.
         add_theme_support( 'yoast-seo-breadcrumbs' );
@@ -129,11 +162,11 @@ if ( ! function_exists( 'urbane_setup' ) ) :
          *
          * @link https://developer.wordpress.org/reference/functions/add_image_size/
          */
-        
-        add_image_size('urbane-thumbnail-size', 800, 800, true); 
-        add_image_size('urbane-related-size', 600, 400, true); 
-        add_image_size('urbane-promo-post', 800, 500, true); 
-        add_image_size('urbane-related-post-thumbnails', 850, 550, true ); 
+
+        add_image_size('urbane-thumbnail-size', 800, 800, true);
+        add_image_size('urbane-related-size', 600, 400, true);
+        add_image_size('urbane-promo-post', 800, 500, true);
+        add_image_size('urbane-related-post-thumbnails', 850, 550, true );
 	}
 endif;
 add_action( 'after_setup_theme', 'urbane_setup' );
@@ -220,6 +253,43 @@ function urbane_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'urbane_widgets_init' );
+
+/**
+ * Register the theme's own block styles.
+ *
+ * Hooked to init, because a style label is a translated string.
+ */
+function urbane_register_block_styles() {
+
+	if ( ! function_exists( 'register_block_style' ) ) {
+		return;
+	}
+
+	register_block_style(
+		'core/paragraph',
+		array(
+			'name'  => 'urbane-lead',
+			'label' => __( 'Lead paragraph', 'urbane' ),
+		)
+	);
+
+	register_block_style(
+		'core/group',
+		array(
+			'name'  => 'urbane-boxed',
+			'label' => __( 'Boxed', 'urbane' ),
+		)
+	);
+
+	register_block_style(
+		'core/list',
+		array(
+			'name'  => 'urbane-plain-list',
+			'label' => __( 'Plain', 'urbane' ),
+		)
+	);
+}
+add_action( 'init', 'urbane_register_block_styles' );
 
 /**
  * Load TS Core Files

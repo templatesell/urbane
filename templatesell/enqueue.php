@@ -1,123 +1,114 @@
 <?php
 /**
  * Enqueue scripts and styles.
+ *
+ * @package Urbane
+ */
+
+/**
+ * Enqueue the front-end styles and scripts.
  */
 function urbane_scripts() {
 
-	/*google font  */
 	global $urbane_theme_options;
-    /*body  */
-    wp_enqueue_style('urbane-body', '//fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&display=swap', array(), null);
-    /*heading  */
-    wp_enqueue_style('urbane-heading', '//fonts.googleapis.com/css?family=Prata&display=swap', array(), null);
-    /*Author signature google font  */
-    wp_enqueue_style('urbane-sign', '//fonts.googleapis.com/css?family=Monsieur+La+Doulaise&display=swap', array(), null);
-    
-	//*Font-Awesome-master*/
-    wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.5.0' );
 
-    wp_enqueue_style( 'grid-css', get_template_directory_uri() . '/css/grid.min.css', array(), '4.5.0' );
-    
-    /*Slick CSS*/
-    wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/css/slick.css', array(), '4.5.0' );
+	/*
+	 * Poppins, Prata and Monsieur La Doulaise are served from the theme. They
+	 * used to be fetched from fonts.googleapis.com on every page view, which
+	 * hands the visitor's IP address to a third party before they have agreed
+	 * to anything, and adds two DNS lookups to the critical path.
+	 */
+	wp_enqueue_style( 'urbane-fonts', get_template_directory_uri() . '/assets/fonts/fonts.css', array(), URBANE_VERSION );
 
-   /*Main CSS*/
-    wp_enqueue_style( 'urbane-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.7.0' );
 
-	/*RTL CSS*/
+	wp_enqueue_style( 'grid-css', get_template_directory_uri() . '/css/grid.min.css', array(), URBANE_VERSION );
+
+	wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/css/slick.css', array(), '1.8.0' );
+
+	wp_enqueue_style( 'urbane-style', get_stylesheet_uri(), array( 'urbane-fonts', 'grid-css' ), URBANE_VERSION );
 	wp_style_add_data( 'urbane-style', 'rtl', 'replace' );
 
-    $urbane_pagination_option =  esc_attr($urbane_theme_options['urbane-pagination-options']);
-    
-    if( 'ajax' == $urbane_pagination_option )  {
-    	
-    	wp_enqueue_script( 'urbane-custom-pagination', get_template_directory_uri() . '/assets/js/custom-infinte-pagination.js', array('jquery'), '4.6.0', true );
-    }
-    wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/assets/js/imagesloaded.js', array(), '20200412', true );
+	$urbane_pagination = isset( $urbane_theme_options['urbane-pagination-options'] )
+		? $urbane_theme_options['urbane-pagination-options']
+		: '';
 
-    $masonry =  esc_attr($urbane_theme_options['urbane-column-blog-page']);
-    if( 'masonry-post' == $masonry || 'one-column' == $masonry)  {
-        wp_enqueue_script( 'masonry' );
-        wp_enqueue_script( 'urbane-custom-masonry', get_template_directory_uri() . '/assets/js/custom-masonry.js', array('jquery'), '4.6.0', true );
-   }
-
-	wp_enqueue_script( 'urbane-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20200412', true );
-
-	/*Slick JS*/
-    wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.js', array('jquery'), '4.6.0', true  );
-    
-
-    
-    /*Custom Script JS*/
-	wp_enqueue_script( 'urbane-script', get_template_directory_uri() . '/assets/js/script.js', array(), '20200412', true );
-    
-	/*Custom Scripts*/
-	wp_enqueue_script( 'urbane-custom', get_template_directory_uri() . '/assets/js/custom.js', array(), '20200412', true );
-    
-	global $wp_query;
-    $paged = ( get_query_var( 'paged' ) > 1 ) ? get_query_var( 'paged' ) : 1;
-    $max_num_pages = $wp_query->max_num_pages;
-
-    wp_localize_script( 'urbane-custom', 'urbane_ajax', array(
-        'ajaxurl' => esc_url(admin_url( 'admin-ajax.php' )),
-        'paged'     => $paged,
-        'max_num_pages'      => $max_num_pages,
-        'next_posts'      => next_posts( $max_num_pages, false ),
-        'show_more'      => __( 'View More', 'urbane' ),
-        'no_more_posts'        => __( 'No More', 'urbane' ),
-    ));
-
-	wp_enqueue_script( 'urbane-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20200412', true );
-
-	/*Sticky Sidebar*/
-	global $urbane_theme_options;
-	if( 1 == absint($urbane_theme_options['urbane-enable-sticky-sidebar'])) {
-		wp_enqueue_script( 'theia-sticky-sidebar', get_template_directory_uri() . '/assets/js/theia-sticky-sidebar.js', array(), '20200412', true );
-        wp_enqueue_script( 'urbane-sticky-sidebar', get_template_directory_uri() . '/assets/js/custom-sticky-sidebar.js', array(), '20200412', true );
+	if ( 'ajax' === $urbane_pagination ) {
+		wp_enqueue_script( 'urbane-custom-pagination', get_template_directory_uri() . '/assets/js/custom-infinte-pagination.js', array( 'jquery' ), URBANE_VERSION, true );
 	}
-    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-        wp_enqueue_script('comment-reply');
-    }
+
+	$urbane_layout = isset( $urbane_theme_options['urbane-column-blog-page'] )
+		? $urbane_theme_options['urbane-column-blog-page']
+		: '';
+
+	if ( 'masonry-post' === $urbane_layout || 'one-column' === $urbane_layout ) {
+		/*
+		 * masonry and imagesloaded both ship with WordPress. The theme carried
+		 * its own copy of imagesloaded, but a handle that core has already
+		 * registered keeps core's source, so that copy was never served.
+		 */
+		wp_enqueue_script( 'imagesloaded' );
+		wp_enqueue_script( 'masonry' );
+		wp_enqueue_script( 'urbane-custom-masonry', get_template_directory_uri() . '/assets/js/custom-masonry.js', array( 'jquery', 'masonry', 'imagesloaded' ), URBANE_VERSION, true );
+	}
+
+	wp_enqueue_script( 'urbane-navigation', get_template_directory_uri() . '/js/navigation.js', array(), URBANE_VERSION, true );
+
+	wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.js', array( 'jquery' ), '1.8.0', true );
+
+	/*
+	 * Both of these call jQuery on the first line and neither declared it. They
+	 * only ran because slick happens to be enqueued ahead of them.
+	 */
+	wp_enqueue_script( 'urbane-script', get_template_directory_uri() . '/assets/js/script.js', array( 'jquery' ), URBANE_VERSION, true );
+
+	wp_enqueue_script( 'urbane-custom', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery' ), URBANE_VERSION, true );
+
+	global $wp_query;
+
+	$urbane_paged     = ( get_query_var( 'paged' ) > 1 ) ? get_query_var( 'paged' ) : 1;
+	$urbane_max_pages = isset( $wp_query->max_num_pages ) ? $wp_query->max_num_pages : 1;
+
+	wp_localize_script(
+		'urbane-custom',
+		'urbane_ajax',
+		array(
+			'ajaxurl'       => esc_url( admin_url( 'admin-ajax.php' ) ),
+			'paged'         => $urbane_paged,
+			'max_num_pages' => $urbane_max_pages,
+			'next_posts'    => next_posts( $urbane_max_pages, false ),
+			'show_more'     => __( 'View More', 'urbane' ),
+			'no_more_posts' => __( 'No More', 'urbane' ),
+			'expand_menu'   => __( 'Expand child menu', 'urbane' ),
+		)
+	);
+
+	wp_enqueue_script( 'urbane-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), URBANE_VERSION, true );
+
+	$urbane_sticky_sidebar = isset( $urbane_theme_options['urbane-enable-sticky-sidebar'] )
+		? absint( $urbane_theme_options['urbane-enable-sticky-sidebar'] )
+		: 0;
+
+	if ( 1 === $urbane_sticky_sidebar ) {
+		wp_enqueue_script( 'theia-sticky-sidebar', get_template_directory_uri() . '/assets/js/theia-sticky-sidebar.js', array( 'jquery' ), '1.4.0', true );
+		wp_enqueue_script( 'urbane-sticky-sidebar', get_template_directory_uri() . '/assets/js/custom-sticky-sidebar.js', array( 'jquery', 'theia-sticky-sidebar' ), URBANE_VERSION, true );
+	}
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'urbane_scripts' );
 
 /**
- * Enqueue fonts for the editor style
+ * Enqueue the block pattern styles.
+ *
+ * The patterns are written with these classes, so the rules are needed wherever
+ * the content is shown - the editor and the front end alike. They used to be
+ * loaded in the admin only, which meant a pattern looked right while it was
+ * being edited and wrong once it was published.
  */
-function urbane_block_styles() {
-    wp_enqueue_style( 'urbane-editor-styles', get_theme_file_uri( 'css/editor-styles.css' ) );
-
-    /*body  */
-    wp_enqueue_style('urbane-editor-body', '//fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&display=swap', array(), null);
-    /*heading  */
-    wp_enqueue_style('urbane-editor-heading', '//fonts.googleapis.com/css?family=Prata&display=swap', array(), null);
-
-    $urbane_custom_css = '
-    .edit-post-visual-editor.editor-styles-wrapper{ font-family: Poppins;}
-
-    .editor-post-title__block .editor-post-title__input,
-    .editor-styles-wrapper h1,
-    .editor-styles-wrapper h2,
-    .editor-styles-wrapper h3,
-    .editor-styles-wrapper h4,
-    .editor-styles-wrapper h5,
-    .editor-styles-wrapper h6{font-family:Prata;} 
-    ';
-
-    wp_add_inline_style( 'urbane-editor-styles', $urbane_custom_css );
+function urbane_block_assets() {
+	wp_enqueue_style( 'urbane-block-style', get_template_directory_uri() . '/templatesell/patterns/block-style.css', array(), URBANE_VERSION );
 }
-
-add_action( 'enqueue_block_editor_assets', 'urbane_block_styles' );
-
-
-/**
- * Enqueue Style for block pattern.
- */
-function prefer_blog_block_style() {
-
-    /*Block Pattern*/
-    if (is_admin()) {
-        wp_enqueue_style( 'urbane-block-style', get_template_directory_uri() . '/templatesell/patterns/block-style.css');
-    }
-}
-add_action( 'enqueue_block_assets', 'prefer_blog_block_style');
+add_action( 'enqueue_block_assets', 'urbane_block_assets' );

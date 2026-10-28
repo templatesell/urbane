@@ -26,11 +26,12 @@ if ( ! function_exists( 'urbane_posted_on' ) ) :
 	$posted_on = 
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
-	$byline = sprintf(
-            esc_html_x('By %s', 'post author', 'urbane'),
-            '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
-        );
-        echo '<span class="posted-on">' . $posted_on . '</span>';
+		/*
+		 * A duplicate of urbane_posted_by() used to be built here and thrown
+		 * away, which also put a second "By %s" into the translation template
+		 * that differed from the one in use only by its first letter.
+		 */
+		echo '<span class="posted-on">' . $posted_on . '</span>';
 	}
 endif;
 

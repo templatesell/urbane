@@ -50,14 +50,11 @@ if (!function_exists('urbane_related_post')) :
                             <div class="show-2-related-posts">
                                 <div class="post-wrap">
                                     <?php
-                                    if (has_post_thumbnail() ):
+                                    if ( has_post_thumbnail() ) :
                                         ?>
-                                        <?php
-                                            $image_id = get_post_thumbnail_id();
-                                            $image_url = wp_get_attachment_image_src( $image_id,'',true );
-                                         ?>
                                         <figure class="post-media">
-                                            <a href="<?php the_permalink() ?>" class="post-image" style="background-image: url(<?php echo esc_url($image_url[0]);?>)">
+                                            <a href="<?php the_permalink() ?>" class="post-image" aria-hidden="true" tabindex="-1">
+                                                <?php the_post_thumbnail( 'urbane-related-size' ); ?>
                                             </a>
                                         </figure>
                                         <?php

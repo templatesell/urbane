@@ -10,7 +10,17 @@
  * Make sure that block patterns are enabled before registering.
  * Requires WordPress version 5.5 or Gutenberg version 7.8.
  */
-if ( function_exists( 'register_block_pattern' ) ) {
+/**
+ * Register the theme's block patterns.
+ *
+ * Hooked to init: a pattern title is a translated string, and asking for a
+ * translation before init loads the text domain too early.
+ */
+function urbane_register_block_patterns() {
+
+	if ( ! function_exists( 'register_block_pattern' ) ) {
+		return;
+	}
 
 
 	/**
@@ -374,3 +384,5 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		)
 	);
 }
+
+add_action( 'init', 'urbane_register_block_patterns' );

@@ -15,14 +15,14 @@ $social_share = absint($urbane_theme_options['urbane-show-hide-share']);
 $date = absint($urbane_theme_options['urbane-show-hide-date']);
 $category = absint($urbane_theme_options['urbane-show-hide-category']);
 $author = absint($urbane_theme_options['urbane-show-hide-author']);
-$image_id = get_post_thumbnail_id();
-$image_url = wp_get_attachment_image_src( $image_id,'',true );
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class($masonry); ?>>
     <div class="post-wrap <?php echo esc_attr($image_location); ?>">
         <?php if(has_post_thumbnail()) { ?>
             <div class="post-media">
-                <a href="<?php the_permalink(); ?>" class="post-image" style="background-image: url(<?php echo esc_url($image_url[0]);?>)"></a>
+                <a href="<?php the_permalink(); ?>" class="post-image" aria-hidden="true" tabindex="-1">
+                    <?php the_post_thumbnail( 'urbane-thumbnail-size' ); ?>
+                </a>
                 <div class="meta_bottom">
                     <?php 
                     if( 1 == $social_share ){
